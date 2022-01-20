@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_card"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
 
     <TextView
-        android:id="@+id/tv_title"
+        android:id="@+id/tv_sign_up_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Login"
+        android:text="Sign up"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -21,10 +21,28 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_full_name"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/name_background"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="true"
+        android:hint="Full name"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_up_title" />
+
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/et_email"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         android:autofillHints="emailAddress"
         android:background="@drawable/email_background"
         android:fontFamily="@font/roboto_light"
@@ -36,10 +54,10 @@
         android:textColorHint="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+        app:layout_constraintTop_toBottomOf="@+id/et_full_name" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/et_password"
+        android:id="@+id/et_password_sign_up"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
@@ -56,46 +74,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_confirm_password_sign_up"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints="password"
+        android:background="@drawable/password_background"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="true"
+        android:hint="Confirm password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_password_sign_up" />
+
     <Button
         android:id="@+id/btn_login"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/button_background_light"
-        android:text="login"
+        android:text="Register"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <TextView
-        android:id="@+id/text_bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="24dp"
-        android:fontFamily="@font/roboto"
-        android:text="Don't have an account?"
-        android:textSize="12sp"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_sign_up_link"
-        app:layout_constraintStart_toStartOf="@+id/btn_login" />
-
-    <TextView
-        android:id="@+id/tv_sign_up_link"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/roboto"
-        android:text="Sign up"
-        android:textAlignment="center"
-        android:textColor="@color/main_theme"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_bottom"
-        app:layout_constraintEnd_toEndOf="@+id/btn_login"
-        app:layout_constraintStart_toEndOf="@+id/text_bottom" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
