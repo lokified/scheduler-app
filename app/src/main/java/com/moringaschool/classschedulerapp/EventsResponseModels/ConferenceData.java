@@ -9,6 +9,7 @@ import org.parceler.Parcel;
 import java.util.List;
 
 @Parcel
+@SuppressWarnings("ALL")
 public class ConferenceData {
 
     @SerializedName("entryPoints")
