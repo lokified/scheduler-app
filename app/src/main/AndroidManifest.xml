@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassSchedulerApp">
-
+        <activity
+            android:name=".AnnouncementsListActivity"
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -30,7 +32,7 @@
             android:exported="false" />
         <activity
             android:name=".AddScheduleActivity"
-            android:exported="false" />v
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
