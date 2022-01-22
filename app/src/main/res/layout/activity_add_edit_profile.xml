@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_card_light"
+    android:id="@+id/cl_Add_Edit_Profile"
     tools:context=".ProfileActivity">
 
     <LinearLayout
@@ -36,29 +37,31 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/profile_photo" />
 
-            <TextView
+            <EditText
                 android:id="@+id/et_Add_Edit_Profile_First_Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="Emily"
-                android:textAllCaps="true"
+                android:hint="First Name"
+                android:maxWidth="190dp"
+                android:padding="6dp"
                 android:textColor="@color/main_theme"
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/iv_Add_Edit_Profile_Avatar"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
+            <EditText
                 android:id="@+id/et_Add_Edit_Profile_Last_Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
-                android:text="Nelson"
-                android:textAllCaps="true"
+                android:hint="Last Name"
+                android:padding="6dp"
                 android:textColor="@color/main_theme"
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/et_Add_Edit_Profile_First_Name"
                 app:layout_constraintTop_toBottomOf="@+id/et_Add_Edit_Profile_First_Name" />
@@ -76,21 +79,23 @@
                 app:layout_constraintStart_toStartOf="@+id/et_Add_Edit_Profile_Last_Name"
                 app:layout_constraintTop_toBottomOf="@+id/et_Add_Edit_Profile_Last_Name" />
 
-            <TextView
-                android:id="@+id/tv_Profile_Email_Value"
+            <EditText
+                android:id="@+id/et_Add_Edit_Profile_Email_Value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/roboto_bold"
                 android:padding="4dp"
-                android:text="emily.nelson@gmail.com"
+                android:text=""
+                android:hint="Email"
+                android:textColorHint="@color/main_theme"
                 android:textColor="@color/main_theme"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/et_Add_Edit_Profile_Last_Name"
                 app:layout_constraintTop_toBottomOf="@+id/tv_Add_Edit_Profile_Email" />
 
             <TextView
-                android:id="@+id/tv_Profile_DoB"
+                android:id="@+id/tv_Add_Edit_Profile_DoB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -100,20 +105,20 @@
                 android:textColor="@color/main_theme"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/et_Add_Edit_Profile_Last_Name"
-                app:layout_constraintTop_toBottomOf="@+id/tv_Profile_Email_Value" />
+                app:layout_constraintTop_toBottomOf="@+id/et_Add_Edit_Profile_Email_Value" />
 
             <TextView
                 android:id="@+id/tv_Add_Edit_Profile_DoB_Value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
                 android:padding="2dp"
                 android:text="December, 07, 1995"
-                android:textColor="@color/main_theme"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/et_Add_Edit_Profile_Last_Name"
-                app:layout_constraintTop_toBottomOf="@+id/tv_Profile_DoB" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_Add_Edit_Profile_DoB" />
 
             <TextView
                 android:id="@+id/tv_Add_Edit_Profile_Address"
@@ -128,14 +133,15 @@
                 app:layout_constraintStart_toStartOf="@+id/et_Add_Edit_Profile_Last_Name"
                 app:layout_constraintTop_toBottomOf="@+id/tv_Add_Edit_Profile_DoB_Value" />
 
-            <TextView
+            <EditText
                 android:id="@+id/tv_Add_Edit_Profile__Address_Value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/roboto_bold"
-                android:padding="2dp"
-                android:text="Mashinani, Kisii"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:hint="Mashinani, Kisii"
                 android:textColor="@color/main_theme"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/et_Add_Edit_Profile_Last_Name"
@@ -169,19 +175,16 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <TextView
+        <EditText
             android:id="@+id/tv__Add_Edit_Profile_Bio_Value"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:ellipsize="marquee"
             android:fontFamily="@font/roboto"
-            android:marqueeRepeatLimit="marquee_forever"
             android:maxLines="4"
-            android:scrollHorizontally="true"
-            android:text="Summary"
+            android:hint="Summary..."
             android:textColor="@color/main_theme"
             android:textSize="14sp" />
 
@@ -296,17 +299,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
+            <EditText
                 android:id="@+id/et_Add_Edit_Profile_Website"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="4dp"
                 android:fontFamily="@font/roboto"
-                android:text="www.github.com"
-                android:textColor="@color/purple_500"
-                android:textSize="18sp"
+                android:hint="www.github.com"
+                android:textColor="@color/main_theme"
+                android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/textView6"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -325,14 +327,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-            <TextView
+            <EditText
                 android:id="@+id/et_Add_Edit_Profile_Phone_Number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
-                android:text="626-398-6547"
+                android:hint="626-398-6547"
                 android:textColor="@color/main_theme"
-                android:textSize="18sp"
+                android:textSize="16sp"
+                android:paddingTop="0dp"
                 app:layout_constraintStart_toStartOf="@+id/et_Add_Edit_Profile_Website"
                 app:layout_constraintTop_toTopOf="@+id/textView7" />
 
