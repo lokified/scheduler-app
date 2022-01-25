@@ -5,17 +5,6 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-
-
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-    <color name="start_gradient">#DEC4FC</color>
-    <color name="stop_gradient">#91C6FC</color>
-    <color name="gray">#C4CBD3</color>
-    <color name="gray_2">#D3D3D3</color>
-    <color name="main_theme">#6A74CF</color>
-    <color name="transparent">#03DEC4FC</color>
-
-
 </resources>
