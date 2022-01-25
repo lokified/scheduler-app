@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -32,6 +33,8 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View view) {
         if(view == addNoteButton){
+            Intent intent = new Intent(ScheduleActivity.this, AddScheduleActivity.class);
+            startActivity(intent);
             Toast.makeText(this, "schedule activity", Toast.LENGTH_SHORT).show();
         }
     }

@@ -7,11 +7,11 @@
         <entry key="app/src/main/res/layout/activity_add_edit_profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_schedule.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_announcements_list.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_landing.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_landing.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_schedule.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_schedule.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_schedule1.xml" value="0.1" />
         <entry key="app/src/main/res/layout/announcement_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/schedule_item.xml" value="0.1" />
