@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
     android:background="@drawable/background_card_light"
     tools:context=".AddScheduleActivity">
 
@@ -113,7 +115,16 @@
         android:textSize="10sp"
         app:layout_constraintEnd_toStartOf="@+id/et_Add_Schedule_Start_Time"
         app:layout_constraintStart_toEndOf="@+id/tv_Schedule_Start"
-        app:layout_constraintTop_toTopOf="@+id/tv_Schedule_Start" />
+        app:layout_constraintTop_toTopOf="@+id/tv_Schedule_Start"
+
+
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+
+        />
+
 
     <EditText
         android:id="@+id/et_Add_Schedule_Start_Time"
