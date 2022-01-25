@@ -48,6 +48,7 @@ Calendar calendar;
 
         addScheduleButton.setOnClickListener(this);
         editStartDate.setOnClickListener(this);
+        editEndDate.setOnClickListener(this);
 
     }
 
@@ -79,6 +80,10 @@ Calendar calendar;
             Toast.makeText(this, "successfully added", Toast.LENGTH_LONG).show();
         }
         if(view == editStartDate){
+            new DatePickerDialog(AddScheduleActivity.this,date,calendar.get(Calendar.YEAR),
+                    calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show();
+        }
+        if(view == editEndDate){
             new DatePickerDialog(AddScheduleActivity.this,date,calendar.get(Calendar.YEAR),
                     calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show();
         }
