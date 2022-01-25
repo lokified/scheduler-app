@@ -41,7 +41,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View view) {
         if(view == signUpButton){
-            Toast.makeText(this, "sign up", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(RegisterActivity.this, ScheduleActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "register", Toast.LENGTH_LONG).show();
         }
     }
 }

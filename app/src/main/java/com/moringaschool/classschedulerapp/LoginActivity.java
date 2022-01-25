@@ -43,9 +43,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         String userEmail = Objects.requireNonNull(editEmail.getText()).toString();
         if(view == loginButton){
+            Intent intent = new Intent(LoginActivity.this, ScheduleActivity.class);
+            startActivity(intent);
             Toast.makeText(this, userEmail, Toast.LENGTH_LONG).show();
         }
         if(view == signUp){
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
             Toast.makeText(this, "sign Up", Toast.LENGTH_LONG).show();
         }
     }

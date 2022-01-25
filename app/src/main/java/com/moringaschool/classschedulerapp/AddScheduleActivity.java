@@ -3,6 +3,7 @@ package com.moringaschool.classschedulerapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,7 +45,9 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View view) {
         String scheduleTitle = editScheduleTitle.getText().toString();
         if(view == addScheduleButton){
-            Toast.makeText(this, scheduleTitle, Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(AddScheduleActivity.this, ScheduleActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "successfully added", Toast.LENGTH_LONG).show();
         }
     }
 }
