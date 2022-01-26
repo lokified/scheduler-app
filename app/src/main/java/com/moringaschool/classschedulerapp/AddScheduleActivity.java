@@ -69,7 +69,6 @@ Calendar calendar;
                 String Format = "MM/dd/yy";
 
                 SimpleDateFormat sdf = new SimpleDateFormat(Format, Locale.US);
-
                 editStartDate.setText(sdf.format(calendar.getTime()));
             }
         };
