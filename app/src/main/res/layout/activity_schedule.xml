@@ -22,6 +22,7 @@
         android:src="@drawable/ic_add"
         android:layout_gravity="bottom|end"
         android:layout_margin="32dp"
+        android:backgroundTint="@color/white"
         />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
