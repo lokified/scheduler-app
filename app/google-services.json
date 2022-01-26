@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "45438142863",
+    "project_id": "scheduler-app-c659a",
+    "storage_bucket": "scheduler-app-c659a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45438142863:android:e4b73085f901b05105a3fa",
+        "android_client_info": {
+          "package_name": "com.moringaschool.classschedulerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45438142863-37hj02edn5i6n8p4dho6i2e1lgu0a8k9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgruHeemTx1kzc52z5nC3oeNsBC7KUdNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45438142863-37hj02edn5i6n8p4dho6i2e1lgu0a8k9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
