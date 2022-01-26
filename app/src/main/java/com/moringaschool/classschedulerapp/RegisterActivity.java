@@ -39,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     @BindView(R.id.et_confirm_password_sign_up) TextInputEditText editPassword2;
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.btn_register) Button signUpButton;
-    @BindView(R.id.loadingTextView) TextInputEditText mLoadingSignUp;
+    @BindView(R.id.loadingTextView) TextView mLoadingSignUp;
     @BindView(R.id.firebaseProgressBar) ProgressBar mSignInProgressBar;
 
 
