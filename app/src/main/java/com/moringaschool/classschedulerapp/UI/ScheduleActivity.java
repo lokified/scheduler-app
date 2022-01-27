@@ -37,65 +37,6 @@ public class ScheduleActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-        ButterKnife.bind(this);
-        addNoteButton.setOnClickListener(this);
-
-       SchedulesAPI client = SchedulesClient.getClient();
-
-       Call<List<SchedulerResponse>> call = client.getAllSessions();
-
-       call.enqueue(new Callback<List<SchedulerResponse>>() {
-           @Override
-           public void onResponse(Call<List<SchedulerResponse>> call, Response<List<SchedulerResponse>> response) {
-
-               List<SchedulerResponse> scheduleList = response.body();
-
-               RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ScheduleActivity.this);
-
-               recyclerView.setAdapter(new SchedulesAdapter(scheduleList, getApplicationContext()));
-               recyclerView.setHasFixedSize(true);
-               recyclerView.setLayoutManager(layoutManager);
-           }
-
-           @Override
-           public void onFailure(Call<List<SchedulerResponse>> call, Throwable t) {
-
-               Toast.makeText(ScheduleActivity.this, "something went wrong", Toast.LENGTH_LONG).show();
-           }
-       });
-    }
-
-    @Override
-    public void onClick(View view) {
-        if(view == addNoteButton){
-            Intent intent = new Intent(ScheduleActivity.this, AddScheduleActivity.class);
-            startActivity(intent);
-//            Toast.makeText(this, "schedule activity", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    //inflate the search menu
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main,menu);
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem menuItem) {
-        int id = menuItem.getItemId();
-
-        if(id == R.id.action_logout) {
-            logOut();
-            Toast.makeText(this, "You are logged out", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-
-        return super.onOptionsItemSelected(menuItem);
     }
 
 }
