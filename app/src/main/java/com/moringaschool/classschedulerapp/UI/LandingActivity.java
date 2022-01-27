@@ -1,8 +1,10 @@
-package com.moringaschool.classschedulerapp;
+package com.moringaschool.classschedulerapp.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.moringaschool.classschedulerapp.R;
 
 public class LandingActivity extends AppCompatActivity {
 
