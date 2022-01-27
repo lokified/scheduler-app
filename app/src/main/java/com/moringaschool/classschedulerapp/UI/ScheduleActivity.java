@@ -3,18 +3,21 @@ package com.moringaschool.classschedulerapp.UI;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.moringaschool.classschedulerapp.R;
 import com.moringaschool.classschedulerapp.SchedulesAPI;
 import com.moringaschool.classschedulerapp.SchedulesClient;
-import com.moringaschool.classschedulerapp.models.SchedulesResponse;
+import com.moringaschool.classschedulerapp.adapter.SchedulesAdapter;
+import com.moringaschool.classschedulerapp.models.SchedulerResponse;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,6 +31,7 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.button_add_note2) FloatingActionButton addNoteButton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,26 +40,29 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         ButterKnife.bind(this);
         addNoteButton.setOnClickListener(this);
 
-        SchedulesAPI client = SchedulesClient.getClient();
-        Call<SchedulesResponse> call = client.getAllSessions();
+       SchedulesAPI client = SchedulesClient.getClient();
 
-        call.enqueue(new Callback<SchedulesResponse>() {
-            @Override
-            public void onResponse(Call<SchedulesResponse> call, Response<SchedulesResponse> response) {
-                if (response.isSuccessful()) {
-                    SchedulesResponse json = response.body();
-                    Log.i("data",json.toString());
+       Call<List<SchedulerResponse>> call = client.getAllSessions();
 
-                }
-            }
+       call.enqueue(new Callback<List<SchedulerResponse>>() {
+           @Override
+           public void onResponse(Call<List<SchedulerResponse>> call, Response<List<SchedulerResponse>> response) {
 
-            @Override
-            public void onFailure(Call<SchedulesResponse> call, Throwable t) {
+               List<SchedulerResponse> scheduleList = response.body();
 
-            }
+               RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ScheduleActivity.this);
 
-        });
+               recyclerView.setAdapter(new SchedulesAdapter(scheduleList, getApplicationContext()));
+               recyclerView.setHasFixedSize(true);
+               recyclerView.setLayoutManager(layoutManager);
+           }
 
+           @Override
+           public void onFailure(Call<List<SchedulerResponse>> call, Throwable t) {
+
+               Toast.makeText(ScheduleActivity.this, "something went wrong", Toast.LENGTH_LONG).show();
+           }
+       });
     }
 
     @Override

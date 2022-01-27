@@ -6,15 +6,12 @@ import com.google.gson.annotations.SerializedName;
 
 import org.parceler.Parcel;
 
-import java.io.Serializable;
-
 @Parcel
-public class SchedulesResponse implements Serializable
-{
+public class SchedulerResponse {
 
     @SerializedName("id")
     @Expose
-    private Long id;
+    private Integer id;
     @SerializedName("sessionName")
     @Expose
     private String sessionName;
@@ -33,13 +30,12 @@ public class SchedulesResponse implements Serializable
     @SerializedName("type")
     @Expose
     private String type;
-    private final static long serialVersionUID = -368631637724158390L;
 
     /**
      * No args constructor for use in serialization
      * 
      */
-    public SchedulesResponse() {
+    public SchedulerResponse() {
     }
 
     /**
@@ -52,7 +48,7 @@ public class SchedulesResponse implements Serializable
      * @param type
      * @param invitationLink
      */
-    public SchedulesResponse(Long id, String sessionName, String invitationLink, String startTime, String endTime, String description, String type) {
+    public SchedulerResponse(Integer id, String sessionName, String invitationLink, String startTime, String endTime, String description, String type) {
         super();
         this.id = id;
         this.sessionName = sessionName;
@@ -63,11 +59,11 @@ public class SchedulesResponse implements Serializable
         this.type = type;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
