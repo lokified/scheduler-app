@@ -65,5 +65,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.firebaseui:firebase-ui-database:8.0.0'
     implementation 'com.google.firebase:firebase-auth'
+
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.2'
+    implementation 'org.sql2o:sql2o:1.6.0'
 }
 apply plugin: 'com.google.gms.google-services'
