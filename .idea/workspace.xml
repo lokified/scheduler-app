@@ -14,8 +14,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a54c06fb-3297-4d3c-9fa8-194e0fc1ffa0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AnnouncementsFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/ModulesFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/ScheduleFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/adapter/ViewPagerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_announcements.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_schedule.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/ClassSchedulerApp.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/ClassSchedulerApp.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/schedule_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/schedule_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AddScheduleActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AddScheduleActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AnnouncementsListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AnnouncementsListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/LandingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/LandingActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/RegisterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/ScheduleActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/ScheduleActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_announcements_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_announcements_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_landing.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_landing.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_schedule.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_schedule.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +62,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="resourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -68,7 +87,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../scheduler-app" />
     <property name="settings.editor.selected.configurable" value="experimental" />
   </component>
   <component name="RecentsManager">
@@ -212,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643284899601</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="change layouts">
+      <created>1643286271176</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1643286271176</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,6 +263,7 @@
     <MESSAGE value="add a butterknife dependency" />
     <MESSAGE value="display sessions with recycler view" />
     <MESSAGE value="add log out menu and post endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="add log out menu and post endpoints" />
+    <MESSAGE value="change layouts" />
+    <option name="LAST_COMMIT_MESSAGE" value="change layouts" />
   </component>
 </project>

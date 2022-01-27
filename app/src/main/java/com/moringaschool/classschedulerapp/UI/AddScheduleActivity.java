@@ -109,9 +109,9 @@ Calendar calendar;
             postSession(title,link,startTime,endTime,description,type);
 
 
-            Intent intent = new Intent(AddScheduleActivity.this, ScheduleActivity.class);
+            Intent intent = new Intent(AddScheduleActivity.this, LandingActivity.class);
             startActivity(intent);
-            Toast.makeText(this, "successfully added", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "successfully added", Toast.LENGTH_LONG).show();
         }
         if(view == editStartDate){
             new DatePickerDialog(AddScheduleActivity.this,date,calendar.get(Calendar.YEAR),
