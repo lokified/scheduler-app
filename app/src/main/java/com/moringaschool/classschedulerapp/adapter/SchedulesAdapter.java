@@ -51,7 +51,8 @@ public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.Sche
     public class SchedulesViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.tv_title_schedule_item) TextView mTitleSchedule;
         @BindView(R.id.tv_description_schedule_item) TextView mDescriptionSchedule;
-
+        @BindView(R.id.tv_start_time) TextView mStartTime;
+        @BindView(R.id.tv_end_time) TextView mEndTime;
 
         private Context mContext;
 
@@ -64,6 +65,8 @@ public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.Sche
         public void bindSession(SchedulerResponse session){
             mTitleSchedule.setText(session.getSessionName());
             mDescriptionSchedule.setText(session.getDescription());
+            mStartTime.setText(session.getStartTime());
+            mEndTime.setText(session.getEndTime());
 
             Log.d("name",session.getSessionName());
         }

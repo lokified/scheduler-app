@@ -3,6 +3,9 @@ package com.moringaschool.classschedulerapp.UI;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -11,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 import com.moringaschool.classschedulerapp.R;
 import com.moringaschool.classschedulerapp.SchedulesAPI;
 import com.moringaschool.classschedulerapp.SchedulesClient;
@@ -72,5 +76,38 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
             startActivity(intent);
             Toast.makeText(this, "schedule activity", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    //inflate the search menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main,menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        int id = menuItem.getItemId();
+
+        if(id == R.id.action_logout) {
+            logOut();
+            Toast.makeText(this, "You are logged out", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(menuItem);
+    }
+
+    //logs out the user
+    public void logOut() {
+        FirebaseAuth.getInstance().signOut();
+
+        Intent intent = new Intent(ScheduleActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -43,14 +43,12 @@ public class SchedulerResponse {
      * @param sessionName
      * @param description
      * @param startTime
-     * @param id
      * @param endTime
      * @param type
      * @param invitationLink
      */
-    public SchedulerResponse(Integer id, String sessionName, String invitationLink, String startTime, String endTime, String description, String type) {
+    public SchedulerResponse( String sessionName, String invitationLink, String startTime, String endTime, String description, String type) {
         super();
-        this.id = id;
         this.sessionName = sessionName;
         this.invitationLink = invitationLink;
         this.startTime = startTime;
