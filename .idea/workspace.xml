@@ -14,14 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a54c06fb-3297-4d3c-9fa8-194e0fc1ffa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/SchedulesAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/SchedulesAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AddScheduleActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AddScheduleActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/ScheduleActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/ScheduleActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/adapter/SchedulesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/adapter/SchedulesAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/models/SchedulerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/models/SchedulerResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/schedule_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/schedule_item.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643276601981</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add log out menu and post endpoints">
+      <created>1643284899601</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1643284899601</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,6 +236,7 @@
     <MESSAGE value="pull changes from the dev" />
     <MESSAGE value="add a butterknife dependency" />
     <MESSAGE value="display sessions with recycler view" />
-    <option name="LAST_COMMIT_MESSAGE" value="display sessions with recycler view" />
+    <MESSAGE value="add log out menu and post endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="add log out menu and post endpoints" />
   </component>
 </project>
