@@ -29,18 +29,14 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ScheduleActivity extends AppCompatActivity implements View.OnClickListener{
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.recyclerViewSchedule) RecyclerView recyclerView;
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.button_add_note2) FloatingActionButton addNoteButton;
+public class ScheduleActivity extends AppCompatActivity{
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-
         ButterKnife.bind(this);
         addNoteButton.setOnClickListener(this);
 
@@ -102,12 +98,4 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         return super.onOptionsItemSelected(menuItem);
     }
 
-    //logs out the user
-    public void logOut() {
-        FirebaseAuth.getInstance().signOut();
-
-        Intent intent = new Intent(ScheduleActivity.this, LoginActivity.class);
-        startActivity(intent);
-        finish();
-    }
 }
