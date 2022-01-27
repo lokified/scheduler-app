@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.moringaschool.classschedulerapp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassSchedulerApp">
         <activity
-            android:name=".AnnouncementsListActivity"
+            android:name=".UI.AnnouncementsListActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".UI.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,16 +24,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LandingActivity"
+            android:name=".UI.LandingActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".UI.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".ScheduleActivity"
+            android:name=".UI.ScheduleActivity"
             android:exported="false" />
         <activity
-            android:name=".AddScheduleActivity"
+            android:name=".UI.AddScheduleActivity"
             android:exported="false" />
 
         <meta-data

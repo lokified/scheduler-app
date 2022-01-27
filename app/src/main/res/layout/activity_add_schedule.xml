@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:background="@drawable/background_card_light"
-    tools:context=".AddScheduleActivity">
+    tools:context=".UI.AddScheduleActivity">
 
     <TextView
         android:id="@+id/tv_Add_Schedule_Heading"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_card_light"
-    tools:context=".ProfileActivity">
+    tools:context=".UI.ProfileActivity">
 
     <LinearLayout
         android:id="@+id/ll_Add_Edit_Profile_Summary_Card"

@@ -1,4 +1,4 @@
-package com.moringaschool.classschedulerapp;
+package com.moringaschool.classschedulerapp.UI;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -14,8 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import java.util.Objects;
+import com.moringaschool.classschedulerapp.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,7 +47,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mAuthListener = firebaseAuth -> {
             FirebaseUser user = firebaseAuth.getCurrentUser();
             if (user != null) {
-                Intent intent = new Intent(LoginActivity.this, ScheduleActivity.class);
+                Intent intent = new Intent(LoginActivity.this, LandingActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();

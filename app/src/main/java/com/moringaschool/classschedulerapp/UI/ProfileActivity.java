@@ -1,4 +1,4 @@
-package com.moringaschool.classschedulerapp;
+package com.moringaschool.classschedulerapp.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.moringaschool.classschedulerapp.R;
 
 import butterknife.BindView;
 
