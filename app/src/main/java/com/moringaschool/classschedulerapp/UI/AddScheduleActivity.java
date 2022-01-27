@@ -48,7 +48,6 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.btn_Add_Schedule_Login) Button addScheduleButton;
 
-Calendar calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +72,6 @@ Calendar calendar;
                 calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
 
                 updateCalendar();
-                updateCalendar2();
             }
 
             private void updateCalendar() {
@@ -83,12 +81,23 @@ Calendar calendar;
                 editStartDate.setText(sdf.format(calendar.getTime()));
                 editEndDate.setText(sdf.format(calendar.getTime()));
             }
+        };
+        Calendar calendar2 = Calendar.getInstance();
+        DatePickerDialog.OnDateSetListener date2 = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+                calendar2.set(Calendar.YEAR,year);
+                calendar2.set(Calendar.MONTH,month);
+                calendar2.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+
+                updateCalendar2();
+            }
 
             private void updateCalendar2() {
                 String Format = "MM dd, yyyy";
 
                 SimpleDateFormat sdf = new SimpleDateFormat(Format, Locale.US);
-                editEndDate.setText(sdf.format(calendar.getTime()));
+                editEndDate.setText(sdf.format(calendar2.getTime()));
             }
         };
 
@@ -111,15 +120,14 @@ Calendar calendar;
 
             Intent intent = new Intent(AddScheduleActivity.this, LandingActivity.class);
             startActivity(intent);
-            //Toast.makeText(this, "successfully added", Toast.LENGTH_LONG).show();
         }
         if(view == editStartDate){
             new DatePickerDialog(AddScheduleActivity.this,date,calendar.get(Calendar.YEAR),
                     calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show();
         }
         if(view == editEndDate){
-            new DatePickerDialog(AddScheduleActivity.this,date,calendar.get(Calendar.YEAR),
-                    calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show();
+            new DatePickerDialog(AddScheduleActivity.this,date2,calendar2.get(Calendar.YEAR),
+                    calendar2.get(Calendar.MONTH),calendar2.get(Calendar.DAY_OF_MONTH)).show();
         }
     }
 
