@@ -1,4 +1,4 @@
-package com.moringaschool.classschedulerapp;
+package com.moringaschool.classschedulerapp.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.moringaschool.classschedulerapp.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
