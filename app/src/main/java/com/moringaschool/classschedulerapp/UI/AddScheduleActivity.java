@@ -75,7 +75,7 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
             }
 
             private void updateCalendar() {
-                String Format = "MM dd, yyyy";
+                String Format = "MMM dd, yyyy";
 
                 SimpleDateFormat sdf = new SimpleDateFormat(Format, Locale.US);
                 editStartDate.setText(sdf.format(calendar.getTime()));
@@ -94,7 +94,7 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
             }
 
             private void updateCalendar2() {
-                String Format = "MM dd, yyyy";
+                String Format = "MMM dd, yyyy";
 
                 SimpleDateFormat sdf = new SimpleDateFormat(Format, Locale.US);
                 editEndDate.setText(sdf.format(calendar2.getTime()));
@@ -103,17 +103,16 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
 
 
         if(view == addScheduleButton){
-//            Jan 27, 2021 12:00:00 AM
             String title = editScheduleTitle.getText().toString();
             String description = editScheduleDescription.getText().toString();
             String link = editScheduleLocation.getText().toString();
             String startDate = editStartDate.getText().toString();
             String endDate = editEndDate.getText().toString();
             String startTime = startDate +" "+ editStartTime.getText().toString() + " AM";
-            String endTime = endDate + " " + editEndTime.getText().toString();
-            String type = editEndTime.getText().toString();
+            String endTime = endDate + " " + editEndTime.getText().toString()+ " AM";;
+            String type = "office";
 
-            Log.d("err",startTime  );
+            Log.d("err",title+"\n"+link+"\n"+startTime+"\n"+endTime+"\n"+description+"\n"+type );
 
             postSession(title,link,startTime,endTime,description,type);
 
