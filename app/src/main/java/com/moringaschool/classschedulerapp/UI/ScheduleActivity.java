@@ -74,7 +74,7 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         if(view == addNoteButton){
             Intent intent = new Intent(ScheduleActivity.this, AddScheduleActivity.class);
             startActivity(intent);
-            Toast.makeText(this, "schedule activity", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "schedule activity", Toast.LENGTH_SHORT).show();
         }
     }
 

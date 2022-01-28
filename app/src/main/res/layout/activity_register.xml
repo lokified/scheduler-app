@@ -112,16 +112,20 @@
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:visibility="invisible"
         tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/loadingTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:layout_below="@+id/firebaseProgressBar"
-        android:textColor="@color/purple_200"
+        android:layout_centerInParent="true"
         android:layout_margin="20dp"
-        android:visibility="gone"
-        tools:ignore="MissingConstraints" />
+
+        android:textColor="@color/purple_200"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="76dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
