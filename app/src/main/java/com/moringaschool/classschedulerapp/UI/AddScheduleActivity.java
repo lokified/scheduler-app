@@ -126,6 +126,7 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
 
             Intent intent = new Intent(AddScheduleActivity.this, LandingActivity.class);
             startActivity(intent);
+            finish();
         }
         if(view == editStartDate){
             new DatePickerDialog(AddScheduleActivity.this,date,calendar.get(Calendar.YEAR),

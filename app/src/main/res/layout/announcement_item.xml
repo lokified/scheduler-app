@@ -39,18 +39,6 @@
 
 
         <TextView
-            android:id="@+id/tv_Time_Announcement_Item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
-            android:gravity="start"
-            android:text="16:45"
-            android:textAllCaps="true"
-            android:textColor="@color/main_theme"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <TextView
             android:id="@+id/tv_Description_Announcement_Item"
             android:layout_width="match_parent"
             android:layout_height="70dp"
