@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_Add_Module_Heading"
         tools:ignore="TouchTargetSizeCheck" />
     <Button
-        android:id="@+id/btn_Add_Schedule_Login"
+        android:id="@+id/btn_Add_Module_Button"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:background="@drawable/button_background_light"
