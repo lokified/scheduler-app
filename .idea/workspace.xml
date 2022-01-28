@@ -14,18 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a54c06fb-3297-4d3c-9fa8-194e0fc1ffa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/adapter/AnnouncementAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/models/Announcement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/SchedulesAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/SchedulesAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AddAnnouncementActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AddAnnouncementActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AddScheduleActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AddScheduleActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AnnouncementsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AnnouncementsListFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/adapter/ViewPagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/adapter/ViewPagerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_announcements_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_announcements_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/announcement_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/announcement_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_announcements.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_announcements.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +241,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643300837102</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add method to retrieve announcement from API">
+      <created>1643384486306</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1643384486306</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add an adapter to to list the announcements">
+      <created>1643384524973</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1643384524973</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -280,6 +283,7 @@
     <MESSAGE value="change layouts" />
     <MESSAGE value="migrate fragments to activities" />
     <MESSAGE value="add method to retrieve announcement from API" />
-    <option name="LAST_COMMIT_MESSAGE" value="add method to retrieve announcement from API" />
+    <MESSAGE value="add an adapter to to list the announcements" />
+    <option name="LAST_COMMIT_MESSAGE" value="add an adapter to to list the announcements" />
   </component>
 </project>
