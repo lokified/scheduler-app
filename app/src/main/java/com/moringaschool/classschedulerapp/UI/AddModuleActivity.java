@@ -48,7 +48,6 @@ public class AddModuleActivity extends AppCompatActivity implements View.OnClick
         editModuleTitle.setOnClickListener(this);
         addModuleButton.setOnClickListener(this);
 
-
     }
 
     @Override
