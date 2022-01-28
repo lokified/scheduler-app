@@ -138,7 +138,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/et_Add_Schedule_Start_Date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/et_Add_Schedule_Start_Date"
-        app:layout_constraintTop_toTopOf="@+id/et_Add_Schedule_Start_Date" />
+        app:layout_constraintTop_toTopOf="@+id/et_Add_Schedule_Start_Date"
+
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+
+        />
 
     <EditText
         android:id="@+id/et_Add_Schedule_Finish_Date"
@@ -172,7 +179,13 @@
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@+id/et_Add_Schedule_Finish_Date"
         app:layout_constraintEnd_toEndOf="@+id/et_Add_Schedule_Start_Time"
-        app:layout_constraintStart_toStartOf="@+id/et_Add_Schedule_Start_Time" />
+        app:layout_constraintStart_toStartOf="@+id/et_Add_Schedule_Start_Time"
+
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
 
 
     <Button
