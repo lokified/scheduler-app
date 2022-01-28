@@ -35,6 +35,10 @@
         <activity
             android:name=".UI.AddScheduleActivity"
             android:exported="false" />
+        <activity
+            android:name=".UI.AddAnnouncementActivity"
+            android:exported="false" />
+
 
         <meta-data
             android:name="preloaded_fonts"

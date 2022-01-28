@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.moringaschool.classschedulerapp.UI.AnnouncementsFragment;
+import com.moringaschool.classschedulerapp.UI.AnnouncementsListFragment;
 import com.moringaschool.classschedulerapp.UI.ModulesFragment;
 import com.moringaschool.classschedulerapp.UI.ScheduleFragment;
 
@@ -25,7 +25,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         else if (position == 1)
             fragment = new ScheduleFragment();
         else if (position == 2)
-            fragment = new AnnouncementsFragment();
+            fragment = new AnnouncementsListFragment();
 
         return fragment;
     }
