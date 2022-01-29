@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_gravity="center"
     android:background="@drawable/background_card_light"
@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="18dp"
         android:fontFamily="@font/roboto_bold"
         android:text="Schedule"
         android:textColor="@color/main_theme"
@@ -24,10 +24,11 @@
 
     <EditText
         android:id="@+id/et_Add_Schedule_Title"
+        android:layout_below="@id/tv_Add_Schedule_Heading"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/card_background"
         android:fontFamily="@font/roboto_light"
@@ -35,18 +36,15 @@
         android:paddingStart="16dp"
         android:textColorHint="@color/main_theme"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_Add_Schedule_Heading"
         tools:ignore="TouchTargetSizeCheck" />
-
 
     <EditText
         android:id="@+id/et_Add_Schedule_Location"
+        android:layout_below="@id/et_Add_Schedule_Title"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/card_background"
         android:defaultFocusHighlightEnabled="true"
@@ -54,17 +52,15 @@
         android:hint="Add Invitation Link"
         android:paddingStart="16dp"
         android:textColorHint="@color/main_theme"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_Add_Schedule_Title" />
+        android:textSize="12sp" />
 
     <EditText
         android:id="@+id/et_Add_Schedule_Description"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/et_Add_Schedule_Location"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/card_background"
         android:defaultFocusHighlightEnabled="true"
@@ -72,134 +68,142 @@
         android:hint="Add description"
         android:paddingStart="16dp"
         android:textColorHint="@color/main_theme"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_Add_Schedule_Location" />
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/editTextType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_Add_Schedule_Description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="25dp"
+        android:height="55dp"
+        android:background="@drawable/card_background"
+        android:hint="Schedule Type"
+        android:inputType="text"
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/tv_Schedule_Start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_below="@id/editTextType"
+        android:layout_marginStart="14dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/roboto"
         android:text="Start time "
         android:textColor="@color/main_theme"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/et_Add_Schedule_Description"
-        app:layout_constraintTop_toBottomOf="@+id/et_Add_Schedule_Description" />
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/et_Add_Schedule_Start_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@id/editTextType"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@id/tv_Schedule_Start"
+        android:background="@drawable/card_background"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:ems="8"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/roboto"
+        android:hint="start date"
+        android:inputType="date"
+        android:textSize="15dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/et_Add_Schedule_Start_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@id/editTextType"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@id/et_Add_Schedule_Start_Date"
+        android:background="@drawable/card_background"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:ems="8"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/roboto"
+        android:hint="start time"
+        android:inputType="time"
+        android:textSize="10sp" />
+
 
     <TextView
         android:id="@+id/tv_Schedule_Finish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_below="@id/tv_Schedule_Start"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/roboto"
         android:text="End time "
         android:textColor="@color/main_theme"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_Schedule_Start"
-        app:layout_constraintTop_toBottomOf="@+id/tv_Schedule_Start" />
-
-    <EditText
-        android:id="@+id/et_Add_Schedule_Start_Date"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:ems="8"
-        android:fontFamily="@font/roboto"
-        android:inputType="date"
-        android:hint="date"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toStartOf="@+id/et_Add_Schedule_Start_Time"
-        app:layout_constraintStart_toEndOf="@+id/tv_Schedule_Start"
-        app:layout_constraintTop_toTopOf="@+id/tv_Schedule_Start"
-
-
-        android:clickable="false"
-        android:cursorVisible="false"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-
-        />
-
-
-    <EditText
-        android:id="@+id/et_Add_Schedule_Start_Time"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:ems="8"
-        android:fontFamily="@font/roboto"
-        android:inputType="time"
-        android:hint="time"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/et_Add_Schedule_Start_Date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/et_Add_Schedule_Start_Date"
-        app:layout_constraintTop_toTopOf="@+id/et_Add_Schedule_Start_Date"
-
-        android:clickable="false"
-        android:cursorVisible="false"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-
-        />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/et_Add_Schedule_Finish_Date"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:ems="8"
-        android:fontFamily="@font/roboto"
-        android:inputType="date"
-        android:hint="date"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="@+id/et_Add_Schedule_Start_Date"
-        app:layout_constraintStart_toStartOf="@+id/et_Add_Schedule_Start_Date"
-        app:layout_constraintTop_toTopOf="@+id/tv_Schedule_Finish"
-
+        android:layout_height="25dp"
+        android:layout_below="@id/et_Add_Schedule_Start_Date"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@id/tv_Schedule_Finish"
+        android:background="@drawable/card_background"
         android:clickable="false"
         android:cursorVisible="false"
+        android:ems="12"
         android:focusable="false"
         android:focusableInTouchMode="false"
-
-        />
+        android:fontFamily="@font/roboto"
+        android:hint="end date"
+        android:inputType="date"
+        android:textSize="10sp" />
 
     <EditText
         android:id="@+id/et_Add_Schedule_Finish_Time"
+        android:layout_below="@id/et_Add_Schedule_Start_Time"
+        android:layout_toRightOf="@id/et_Add_Schedule_Finish_Date"
+        android:background="@drawable/card_background"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:ems="8"
+        android:layout_height="25dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
         android:fontFamily="@font/roboto"
         android:gravity=""
         android:inputType="time"
         android:hint="time"
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/et_Add_Schedule_Finish_Date"
-        app:layout_constraintEnd_toEndOf="@+id/et_Add_Schedule_Start_Time"
-        app:layout_constraintStart_toStartOf="@+id/et_Add_Schedule_Start_Time"
-
         android:clickable="false"
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
         />
 
-
     <Button
         android:id="@+id/btn_Add_Schedule_Login"
-        android:layout_width="250dp"
+        android:layout_width="85dp"
         android:layout_height="40dp"
+        android:layout_below="@id/tv_Schedule_Finish"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
         android:background="@drawable/button_background_light"
         android:text="Add"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/et_Add_Schedule_Finish_Date"
         tools:ignore="TouchTargetSizeCheck" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
