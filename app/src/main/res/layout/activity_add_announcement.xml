@@ -7,6 +7,20 @@
     android:background="@drawable/background_card_light"
     tools:context=".UI.AddAnnouncementActivity">
 
+    <TextView
+        android:id="@+id/tv_Add_Announcement_Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Add Annonement"
+        android:textAllCaps="true"
+        android:textColor="@color/main_theme"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <EditText
         android:id="@+id/et_Add_Announcement_Title"
@@ -22,8 +36,9 @@
         android:textColorHint="@color/main_theme"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Add_Announcement_Heading"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
@@ -52,9 +67,9 @@
         android:layout_height="45dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/button_background_light"
+        android:paddingBottom="14dp"
         android:text="add"
         android:textAlignment="center"
-        android:paddingBottom="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_Add_Announcement_Description"
