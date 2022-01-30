@@ -14,7 +14,7 @@
         android:layout_alignParentEnd="true"
         android:layout_margin="10dp"
         android:paddingStart="16dp"
-        android:paddingTop="8dp"
+        android:padding="8dp"
         android:background="@drawable/card_background"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent">

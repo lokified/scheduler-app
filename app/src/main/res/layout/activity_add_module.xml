@@ -4,31 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_gravity="center"
     android:background="@drawable/background_card_light"
+    android:orientation="vertical"
     tools:context=".UI.AddScheduleActivity">
 
     <TextView
         android:id="@+id/tv_Add_Module_Heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="48dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Module"
+        android:text="Add Module"
+        android:textAllCaps="true"
         android:textColor="@color/main_theme"
         android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/et_Add_Module_Title"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="32dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/card_background"
         android:fontFamily="@font/roboto_light"
         android:hint="Module name"
@@ -39,17 +40,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_Add_Module_Heading"
         tools:ignore="TouchTargetSizeCheck" />
+
     <Button
         android:id="@+id/btn_Add_Module_Button"
         android:layout_width="250dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/button_background_light"
+        android:paddingBottom="14dp"
         android:text="Add"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="80dp"
         app:layout_constraintTop_toBottomOf="@+id/et_Add_Module_Title"
         tools:ignore="TouchTargetSizeCheck" />
 
