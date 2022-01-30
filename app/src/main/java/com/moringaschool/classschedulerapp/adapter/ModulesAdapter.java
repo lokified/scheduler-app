@@ -1,11 +1,14 @@
 package com.moringaschool.classschedulerapp.adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -49,14 +52,16 @@ public class ModulesAdapter extends RecyclerView.Adapter<ModulesAdapter.ModulesV
     }
 
 
-    public class ModulesViewHolder extends RecyclerView.ViewHolder {
+    public class ModulesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         @BindView(R.id.tv_title_module_item) TextView mTitleModule;
         private Context mContext;
+        AlertDialog.Builder alertBuilder;
 
         public ModulesViewHolder(@NonNull View itemView ) {
             super(itemView);
             ButterKnife.bind(this,itemView);
             mContext = itemView.getContext();
+            itemView.setOnClickListener(this);
         }
 
         public void bindModules(ModuleResponse module){
@@ -64,7 +69,31 @@ public class ModulesAdapter extends RecyclerView.Adapter<ModulesAdapter.ModulesV
 
             Log.d("name",module.getName());
         }
-    }
 
+        @Override
+        public void onClick(View view) {
+            int itemPosition = getLayoutPosition();
+            String moduleName = mModules.get(itemPosition).getName();
+            alertBuilder = new AlertDialog.Builder(mContext);
+
+            alertBuilder.setTitle(moduleName).setMessage(moduleName + " Details")
+                    .setCancelable(true)
+                    .setPositiveButton("View Students", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Toast.makeText(mContext, "students", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+
+
+                    .setNegativeButton("Add Students To Module", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Toast.makeText(mContext, "modules", Toast.LENGTH_SHORT).show();
+                        }
+                    }).show();
+
+        }
+    }
 
 }
