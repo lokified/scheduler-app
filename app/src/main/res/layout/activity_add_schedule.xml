@@ -75,6 +75,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_Add_Schedule_Location" />
 
+    <EditText
+        android:id="@+id/et_Add_Schedule_Type"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/card_background"
+        android:defaultFocusHighlightEnabled="true"
+        android:fontFamily="@font/roboto_light"
+        android:hint="Add type"
+        android:paddingStart="16dp"
+        android:textColorHint="@color/main_theme"
+        android:textSize="16sp"
+        android:textColor="@color/main_theme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Add_Schedule_Description" />
+
     <TextView
         android:id="@+id/tv_Schedule_Start"
         android:layout_width="wrap_content"
@@ -85,8 +102,8 @@
         android:textColor="@color/main_theme"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/et_Add_Schedule_Description"
-        app:layout_constraintTop_toBottomOf="@+id/et_Add_Schedule_Description" />
+        app:layout_constraintStart_toStartOf="@+id/et_Add_Schedule_Type"
+        app:layout_constraintTop_toBottomOf="@+id/et_Add_Schedule_Type" />
 
     <TextView
         android:id="@+id/tv_Schedule_Finish"
