@@ -44,10 +44,10 @@
     <Button
         android:id="@+id/btn_Add_Module_Button"
         android:layout_width="250dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         android:layout_marginTop="80dp"
         android:background="@drawable/button_background_light"
-        android:paddingBottom="4dp"
+        android:paddingBottom="14dp"
         android:text="Add"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
