@@ -11,6 +11,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/announcementFragegmet"
         tools:layout="@layout/activity_announcements_list"
-        android:name="com.moringaschool.classschedulerapp.UI.AnnouncementsFragment"/>
+        android:name="com.moringaschool.classschedulerapp.UI.AnnouncementsListFragment"/>
 
 </RelativeLayout>

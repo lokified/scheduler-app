@@ -2,6 +2,8 @@ package com.moringaschool.classschedulerapp;
 
 import android.se.omapi.Session;
 
+import com.moringaschool.classschedulerapp.models.Announcement;
+import com.moringaschool.classschedulerapp.models.ModuleResponse;
 import com.moringaschool.classschedulerapp.models.SchedulerResponse;
 
 import java.util.List;
@@ -18,5 +20,16 @@ public interface SchedulesAPI {
     @GET("/sessions")
     Call<List<SchedulerResponse>> getAllSessions();
 
+    @POST("/announcements/new")
+    Call<Announcement> addAnnouncement(@Body Announcement announcement);
+
+    @GET("/announcements")
+    Call<List<Announcement>> getAllAnnouncements();
+
+    @POST("/modules/new")
+    Call<ModuleResponse> addModule(@Body ModuleResponse module);
+
+    @GET("/modules")
+    Call<List<ModuleResponse>> getAllModules();
 
 }

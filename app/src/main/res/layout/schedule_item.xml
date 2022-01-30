@@ -6,9 +6,6 @@
     android:layout_height="wrap_content"
     android:background="@color/transparent">
 
-
-
-
     <LinearLayout
         android:id="@+id/ll_title_description"
         android:layout_width="match_parent"
@@ -16,10 +13,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_margin="10dp"
-        android:paddingStart="16dp"
-        android:paddingTop="8dp"
         android:background="@drawable/card_background"
         android:orientation="vertical"
+        android:padding="8dp"
+        android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
@@ -52,37 +49,45 @@
             android:textStyle="bold|italic"
             app:layout_constraintTop_toBottomOf="@id/tv_title_schedule_item" />
 
-        <TextView
-            android:id="@+id/tv_end_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_start_time"
-            android:fontFamily="@font/roboto_bold"
-            android:gravity="start"
-            android:padding="5dp"
-            android:text="17:25"
-            android:textAllCaps="true"
-            android:textColor="@color/main_theme"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:layout_marginTop="2dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_start_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
-            android:gravity="start"
-            android:padding="5dp"
-            android:text="16:45"
-            android:textAllCaps="true"
-            android:textColor="@color/main_theme"
-            android:textSize="10sp"
-            android:textStyle="bold"
-            android:layout_marginTop="1dp"/>
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_start_time"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="start"
+                android:padding="5dp"
+                android:text="17:25"
+                android:layout_weight="0.4"
+                android:textAllCaps="true"
+                android:textColor="@color/main_theme"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="end"
+                android:padding="5dp"
+                android:text="16:45"
+                android:layout_weight="0.4"
+                android:textAllCaps="true"
+                android:textColor="@color/main_theme"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

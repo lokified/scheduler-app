@@ -49,6 +49,8 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
     @BindView(R.id.et_Add_Schedule_Finish_Time) EditText editEndTime;
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.btn_Add_Schedule_Login) Button addScheduleButton;
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.et_Add_Schedule_Type) EditText editScheduleType;
 
     int hour,minute;
     TimePickerDialog timePickerDialog,timePickerDialog2;
@@ -117,15 +119,15 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
             String endDate = editEndDate.getText().toString();
             String startTime = startDate +" "+ editStartTime.getText().toString();
             String endTime = endDate + " " + editEndTime.getText().toString();;
-            String type = "office";
+            String type = editScheduleType.getText().toString();
 
             Log.d("err",title+"\n"+link+"\n"+startTime+"\n"+endTime+"\n"+description+"\n"+type );
-
             postSession(title,link,startTime,endTime,description,type);
 
 
             Intent intent = new Intent(AddScheduleActivity.this, LandingActivity.class);
             startActivity(intent);
+            finish();
         }
         if(view == editStartDate){
             new DatePickerDialog(AddScheduleActivity.this,date,calendar.get(Calendar.YEAR),
