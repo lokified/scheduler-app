@@ -50,7 +50,7 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.btn_Add_Schedule_Login) Button addScheduleButton;
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.et_Add_Schedule_Type) EditText editScheduleType;
+    @BindView(R.id.editTextType) EditText editScheduleType;
 
     int hour,minute;
     TimePickerDialog timePickerDialog,timePickerDialog2;
