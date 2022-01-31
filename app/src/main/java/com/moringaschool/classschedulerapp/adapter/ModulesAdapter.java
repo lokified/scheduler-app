@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -49,7 +50,7 @@ public class ModulesAdapter extends RecyclerView.Adapter<ModulesAdapter.ModulesV
     }
 
 
-    public class ModulesViewHolder extends RecyclerView.ViewHolder {
+    public class ModulesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         @BindView(R.id.tv_title_module_item) TextView mTitleModule;
         private Context mContext;
 
@@ -57,6 +58,7 @@ public class ModulesAdapter extends RecyclerView.Adapter<ModulesAdapter.ModulesV
             super(itemView);
             ButterKnife.bind(this,itemView);
             mContext = itemView.getContext();
+            itemView.setOnClickListener(this);
         }
 
         public void bindModules(ModuleResponse module){
@@ -64,7 +66,13 @@ public class ModulesAdapter extends RecyclerView.Adapter<ModulesAdapter.ModulesV
 
             Log.d("name",module.getName());
         }
-    }
 
+        @Override
+        public void onClick(View view) {
+            int itemPosition = getLayoutPosition();
+            String moduleName = mModules.get(itemPosition).getName();
+            Toast.makeText(mContext, moduleName, Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }
