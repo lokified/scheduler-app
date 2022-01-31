@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
@@ -14,7 +14,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a54c06fb-3297-4d3c-9fa8-194e0fc1ffa0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/SchedulesAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/SchedulesAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/ScheduleDetailActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/ScheduleDetailFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/adapter/DetailViewPager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_schedule_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_schedule_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/adapter/SchedulesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/adapter/SchedulesAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +102,12 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/models" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/model2" />
+    </key>
+    <key name="android.template.2025525480">
+      <recent name="com.moringaschool.classschedulerapp.UI" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.moringaschool.classschedulerapp.adapter" />
     </key>
   </component>
   <component name="RunManager">
@@ -255,7 +270,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643384524973</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="change id of the field">
+      <created>1643546248707</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1643546248707</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add a refresh layout to the fragment">
+      <created>1643570249185</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1643570249185</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,6 +313,9 @@
     <MESSAGE value="migrate fragments to activities" />
     <MESSAGE value="add method to retrieve announcement from API" />
     <MESSAGE value="add an adapter to to list the announcements" />
-    <option name="LAST_COMMIT_MESSAGE" value="add an adapter to to list the announcements" />
+    <MESSAGE value="make changes" />
+    <MESSAGE value="change id of the field" />
+    <MESSAGE value="add a refresh layout to the fragment" />
+    <option name="LAST_COMMIT_MESSAGE" value="add a refresh layout to the fragment" />
   </component>
 </project>
