@@ -3,6 +3,7 @@ package com.moringaschool.classschedulerapp.adapter;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.moringaschool.classschedulerapp.R;
+import com.moringaschool.classschedulerapp.UI.AddUserToModuleActivity;
+import com.moringaschool.classschedulerapp.UI.LandingActivity;
+import com.moringaschool.classschedulerapp.UI.UserModuleFragment;
 import com.moringaschool.classschedulerapp.models.ModuleResponse;
 import com.moringaschool.classschedulerapp.models.SchedulerResponse;
 
@@ -82,6 +86,8 @@ public class ModulesAdapter extends RecyclerView.Adapter<ModulesAdapter.ModulesV
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             Toast.makeText(mContext, "students", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(mContext, LandingActivity.class);
+                            mContext.startActivity(intent);
                         }
                     })
 
@@ -90,6 +96,8 @@ public class ModulesAdapter extends RecyclerView.Adapter<ModulesAdapter.ModulesV
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             Toast.makeText(mContext, "modules", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(mContext, AddUserToModuleActivity.class);
+                            mContext.startActivity(intent);
                         }
                     }).show();
 
