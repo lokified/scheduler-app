@@ -22,9 +22,11 @@ import butterknife.ButterKnife;
 
 public class ScheduleDetailFragment extends Fragment {
 
-    @BindView(R.id.sessionNameLabel) TextView mSessionNameLabel;
+    @BindView(R.id.startTimeLabel) TextView mSessionStartLabel;
+    @BindView(R.id.endTimeLabel) TextView mSessionEndLabel;
+    @BindView(R.id.linkLabel) TextView mSessionLinkLabel;
+    @BindView(R.id.descriptionLabel) TextView mSessionDescriptionLabel;
 
-    private List<SchedulerResponse> mSessions;
     private SchedulerResponse mSession;
 
     public ScheduleDetailFragment() {
@@ -32,7 +34,7 @@ public class ScheduleDetailFragment extends Fragment {
     }
 
 
-    public static ScheduleDetailFragment newInstance(List<SchedulerResponse> session) {
+    public static ScheduleDetailFragment newInstance(SchedulerResponse session) {
         ScheduleDetailFragment fragment = new ScheduleDetailFragment();
         Bundle args = new Bundle();
         args.putParcelable("session", Parcels.wrap(session));
@@ -45,7 +47,7 @@ public class ScheduleDetailFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mSessions = Parcels.unwrap(getArguments().getParcelable("session"));
+        mSession = Parcels.unwrap(getArguments().getParcelable("session"));
 
 
     }
@@ -57,7 +59,10 @@ public class ScheduleDetailFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_schedule_detail, container, false);
         ButterKnife.bind(this, view);
 
-        //mSessionNameLabel.setText(mSession.getSessionName());
+        mSessionStartLabel.setText("start : "+ mSession.getStartTime());
+        mSessionEndLabel.setText("end : " + mSession.getEndTime());
+        mSessionLinkLabel.setText("link : " + mSession.getInvitationLink());
+        mSessionDescriptionLabel.setText(mSession.getDescription());
 
 
         return view;
