@@ -34,8 +34,8 @@ public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.Sche
     private static List<SchedulerResponse> UnFilteredSchedules;
     Context mContext;
 
-    public SchedulesAdapter(List<SchedulerResponse> mSchedules, Context mContext) {
-        mSchedules = mSchedules;
+    public SchedulesAdapter(List<SchedulerResponse> schedules, Context mContext) {
+        mSchedules = schedules;
         UnFilteredSchedules = new ArrayList<>(mSchedules);
         this.mContext = mContext;
     }

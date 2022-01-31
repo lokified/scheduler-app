@@ -3,6 +3,7 @@ package com.moringaschool.classschedulerapp.UI;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,6 +18,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.moringaschool.classschedulerapp.R;
@@ -40,7 +42,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener{
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.button_add_note2) FloatingActionButton addNoteButton;
     private SchedulesAdapter schedulesAdapter;
-//    @BindView(R.id.refreshLayout) SwipeRefreshLayout mRefresh;
+    @BindView(R.id.refreshLayout) SwipeRefreshLayout mRefresh;
 
     public ScheduleFragment() {
         // Required empty public constructor
@@ -66,19 +68,19 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener{
 
         getSchedules();
 
-//        mRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-//            @Override
-//            public void onRefresh() {
-//                getSchedules();
-//
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override public void run() {
-//                        // Stop animation (This will be after 3 seconds)
-//                        mRefresh.setRefreshing(false);
-//                    }
-//                }, 2000);
-//            }
-//        });
+        mRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                getSchedules();
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override public void run() {
+                        // Stop animation (This will be after 3 seconds)
+                        mRefresh.setRefreshing(false);
+                    }
+                }, 2000);
+            }
+        });
 
         return view;
     }
@@ -125,7 +127,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener{
 
             @Override
             public boolean onQueryTextChange(String userText) {
-//                schedulesAdapter.getFilter().filter(userText);
+                schedulesAdapter.getFilter().filter(userText);
                 return false;
             }
         });
