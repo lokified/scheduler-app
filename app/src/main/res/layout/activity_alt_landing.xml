@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
     tools:context=".UI.AltLandingActivity"
-    tools:openDrawer="start">
+    tools:openDrawer="start"
+    android:background="@drawable/background_card_light">
 
     <LinearLayout
         android:layout_width="match_parent"
