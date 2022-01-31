@@ -26,6 +26,6 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="32dp"
         android:backgroundTint="@color/white"
-        android:src="@drawable/ic_add" />
+        android:src="@drawable/outline_create_black_18" />
 
 </FrameLayout>

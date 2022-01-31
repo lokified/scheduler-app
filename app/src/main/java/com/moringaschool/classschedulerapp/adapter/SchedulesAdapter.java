@@ -1,11 +1,14 @@
 package com.moringaschool.classschedulerapp.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,19 +21,22 @@ import com.moringaschool.classschedulerapp.models.SchedulerResponse;
 
 import org.parceler.Parcels;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.SchedulesViewHolder>  {
+public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.SchedulesViewHolder>  implements Filterable {
 
 
-    List<SchedulerResponse> mSchedules;
+    private static List <SchedulerResponse> mSchedules;
+    private static List<SchedulerResponse> UnFilteredSchedules;
     Context mContext;
 
-    public SchedulesAdapter(List<SchedulerResponse> mSchedules, Context mContext) {
-        this.mSchedules = mSchedules;
+    public SchedulesAdapter(List<SchedulerResponse> schedules, Context mContext) {
+        mSchedules = schedules;
+        UnFilteredSchedules = new ArrayList<>(mSchedules);
         this.mContext = mContext;
     }
 
@@ -52,11 +58,49 @@ public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.Sche
         return mSchedules.size();
     }
 
+    @Override
+    public Filter getFilter() {
+        return FilteredSessions;
+    }
+    private final Filter FilteredSessions = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            List<SchedulerResponse> FilteredSessions = new ArrayList<>();
+            if (charSequence == null || charSequence.length() == 0 ){
+                FilteredSessions.addAll(UnFilteredSchedules);
+            }
+            else{
+                String userSearchString = charSequence.toString().toLowerCase().trim();
+                for(SchedulerResponse oneSession : UnFilteredSchedules){
+                    if(oneSession.getSessionName().toLowerCase().contains(userSearchString)){
+                        FilteredSessions.add(oneSession);
+                    }
+                }
 
-    public class SchedulesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+            }
+            FilterResults matchedsessions = new FilterResults();
+            matchedsessions.values = FilteredSessions;
+            return matchedsessions;
+        }
+
+        @SuppressLint("NotifyDataSetChanged")
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults matchedVideos) {
+            mSchedules.clear();
+            mSchedules.addAll((List)matchedVideos.values);
+            notifyDataSetChanged();
+        }
+    };
+
+
+    public static class SchedulesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.tv_title_schedule_item) TextView mTitleSchedule;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.tv_description_schedule_item) TextView mDescriptionSchedule;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.tv_start_time) TextView mStartTime;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.tv_end_time) TextView mEndTime;
 
         private Context mContext;

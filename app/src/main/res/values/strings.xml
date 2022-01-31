@@ -6,4 +6,9 @@
     <string name="email">Email</string>
     <string name="position">Position</string>
     <string name="module_id">Module ID</string>
+    <string name="add_user_to_module">Add user to module</string>
+    <string name="jane_doe">Jane Doe</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
 </resources>
