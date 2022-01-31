@@ -51,9 +51,9 @@ public class AddAnnouncementActivity extends AppCompatActivity implements View.O
         if(view == btn_add_announcement){
             String title = announcement_Title.getText().toString();
             String description = announcement_description.getText().toString();
-            int userId = mAnnouncement.getUserId();
+            //int userId = mAnnouncement.getUserId();
 
-            postAnnouncement(title,userId,description);
+            postAnnouncement(title,1,description);
 
             Intent intent = new Intent(AddAnnouncementActivity.this, LandingActivity.class);
             startActivity(intent);

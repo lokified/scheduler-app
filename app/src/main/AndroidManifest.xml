@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassSchedulerApp">
         <activity
-            android:name=".UI.AddUserToModuleActivity"
+            android:name=".UI.ScheduleDetailActivity"
             android:exported="false" />
         <activity
             android:name=".UI.AddModuleActivity"
@@ -43,6 +43,9 @@
             android:exported="false" />
         <activity
             android:name=".UI.AddAnnouncementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AddUserToModuleActivity"
             android:exported="false" />
 
         <meta-data

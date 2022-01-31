@@ -7,7 +7,9 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +38,7 @@ public class ModulesFragment extends Fragment implements View.OnClickListener{
     @BindView(R.id.recyclerViewModule) RecyclerView recyclerView;
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.button_add_module) FloatingActionButton addModuleButton;
+    @BindView(R.id.refreshLayoutModule) SwipeRefreshLayout mRefresh;
 
     public ModulesFragment() {
         // Required empty public constructor
@@ -58,6 +61,26 @@ public class ModulesFragment extends Fragment implements View.OnClickListener{
         ButterKnife.bind(this, view);
         addModuleButton.setOnClickListener(this);
 
+        getModule();
+
+        mRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                getModule();
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override public void run() {
+                        // Stop animation (This will be after 3 seconds)
+                        mRefresh.setRefreshing(false);
+                    }
+                }, 2000);
+            }
+        });
+
+        return view;
+    }
+
+    public void getModule() {
         SchedulesAPI client = SchedulesClient.getClient();
 
         Call<List<ModuleResponse>> call = client.getAllModules();
@@ -81,7 +104,6 @@ public class ModulesFragment extends Fragment implements View.OnClickListener{
                 Toast.makeText(getActivity(), "something went wrong", Toast.LENGTH_LONG).show();
             }
         });
-        return view;
     }
 
     @Override

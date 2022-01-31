@@ -66,7 +66,7 @@
                 android:text="17:25"
                 android:layout_weight="0.4"
                 android:textAllCaps="true"
-                android:textColor="@color/main_theme"
+                android:textColor="@color/green"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
@@ -81,7 +81,7 @@
                 android:text="16:45"
                 android:layout_weight="0.4"
                 android:textAllCaps="true"
-                android:textColor="@color/main_theme"
+                android:textColor="@color/red"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </LinearLayout>
