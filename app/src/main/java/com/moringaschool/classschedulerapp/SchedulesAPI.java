@@ -13,6 +13,8 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface SchedulesAPI {
     @POST("/sessions/new")
@@ -34,9 +36,12 @@ public interface SchedulesAPI {
     Call<List<ModuleResponse>> getAllModules();
 
     @POST("/user/:userId/modules/:moduleId")
+
     Call<UserModuleResponse> addUserModule(@Body UserModuleResponse usermodule);
 
-    @GET("userModule/:userId")
-    Call<List<UserModuleResponse>> getModuleByUser();
+    @GET("/modules/{id}/users")
+    Call<List<UserModuleResponse>> getModuleByUser(
+            @Path(value = "id", encoded = true
+    ) int moduleid);
 
 }

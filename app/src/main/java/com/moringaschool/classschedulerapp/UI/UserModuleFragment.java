@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,14 +58,19 @@ public class UserModuleFragment extends Fragment{
 
         ButterKnife.bind(this, view);
 
+        String Item = getActivity().getIntent().getExtras().getString("moduleid");
+        int id = Integer.parseInt(Item);
+
         SchedulesAPI client = SchedulesClient.getClient();
 
-        Call<List<UserModuleResponse>> call = client.getModuleByUser();
+        Call<List<UserModuleResponse>> call = client.getModuleByUser(id);
 
         call.enqueue(new Callback<List<UserModuleResponse>>() {
             @Override
             public void onResponse(Call<List<UserModuleResponse>> call, Response<List<UserModuleResponse>> response) {
                 List<UserModuleResponse> usermoduleList = response.body();
+
+                Log.e("ronald", usermoduleList.get(0).getName());
 
                 RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
 

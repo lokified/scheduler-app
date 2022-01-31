@@ -54,7 +54,7 @@ public class UserModuleAdapter extends RecyclerView.Adapter<UserModuleAdapter.Us
         @BindView(R.id.tv_username_item) TextView mUsername;
         @BindView(R.id.tv_userPosition_item) TextView mUserPosition;
         @BindView(R.id.tv_useremail_item) TextView mUserEmail;
-        @BindView(R.id.tv_useremodule_item) TextView mUserModule;
+//        @BindView(R.id.tv_useremodule_item) TextView mUserModule;
 
         private Context mContext;
 
@@ -68,7 +68,7 @@ public class UserModuleAdapter extends RecyclerView.Adapter<UserModuleAdapter.Us
             mUsername.setText(usermodule.getName());
             mUserPosition.setText(usermodule.getPosition());
             mUserEmail.setText(usermodule.getEmail());
-            mUserModule.setText(usermodule.getModuleId());
+//            mUserModule.setText(usermodule.getModuleId());
         }
     }
 

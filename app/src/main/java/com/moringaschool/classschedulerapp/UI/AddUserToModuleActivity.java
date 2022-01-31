@@ -70,7 +70,7 @@ public class AddUserToModuleActivity extends AppCompatActivity implements View.O
 
             postUserModule(name,email,position,moduleId);
 
-            Intent intent = new Intent(AddUserToModuleActivity.this, UserModuleFragment.class);
+            Intent intent = new Intent(AddUserToModuleActivity.this, LandingActivity.class);
             startActivity(intent);
         }
 
