@@ -1,17 +1,22 @@
 package com.moringaschool.classschedulerapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.moringaschool.classschedulerapp.R;
+import com.moringaschool.classschedulerapp.UI.ScheduleDetailActivity;
 import com.moringaschool.classschedulerapp.models.SchedulerResponse;
+
+import org.parceler.Parcels;
 
 import java.util.List;
 
@@ -48,7 +53,7 @@ public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.Sche
     }
 
 
-    public class SchedulesViewHolder extends RecyclerView.ViewHolder {
+    public class SchedulesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         @BindView(R.id.tv_title_schedule_item) TextView mTitleSchedule;
         @BindView(R.id.tv_description_schedule_item) TextView mDescriptionSchedule;
         @BindView(R.id.tv_start_time) TextView mStartTime;
@@ -60,6 +65,8 @@ public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.Sche
             super(itemView);
             ButterKnife.bind(this,itemView);
             mContext = itemView.getContext();
+
+            itemView.setOnClickListener(this);
         }
 
         public void bindSession(SchedulerResponse session){
@@ -69,6 +76,21 @@ public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.Sche
             mEndTime.setText(session.getEndTime());
 
             Log.d("name",session.getSessionName());
+        }
+
+        @Override
+        public void onClick(View  v) {
+
+            int itemPosition = getLayoutPosition();
+
+            Intent intent = new Intent(mContext, ScheduleDetailActivity.class);
+            intent.putExtra("session", Parcels.wrap(mSchedules));
+            intent.putExtra("position", itemPosition);
+            mContext.startActivity(intent);
+
+            String name = mSchedules.get(itemPosition).getSessionName();
+
+            Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show();
         }
     }
 
