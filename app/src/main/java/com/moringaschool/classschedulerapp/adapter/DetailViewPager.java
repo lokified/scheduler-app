@@ -11,26 +11,26 @@ import com.moringaschool.classschedulerapp.models.SchedulerResponse;
 import java.util.List;
 
 public class DetailViewPager extends FragmentPagerAdapter {
-    private List<SchedulerResponse> mSession;
+    private List<SchedulerResponse> mSessions;
 
 
     public DetailViewPager(@NonNull FragmentManager fm, int behavior, List<SchedulerResponse> session) {
         super(fm,behavior);
-        mSession = session;
+        mSessions = session;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return ScheduleDetailFragment.newInstance(mSession);
+        return ScheduleDetailFragment.newInstance(mSessions.get(position));
     }
 
     @Override
     public int getCount() {
-        return mSession.size();
+        return mSessions.size();
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return mSession.get(position).getSessionName();
+        return mSessions.get(position).getSessionName();
     }
 }
