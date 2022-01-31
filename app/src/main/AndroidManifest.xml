@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassSchedulerApp">
         <activity
+            android:name=".UI.AltLandingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClassSchedulerApp.NoActionBar"/>
+        <activity
             android:name=".UI.ScheduleDetailActivity"
             android:exported="false" />
         <activity
