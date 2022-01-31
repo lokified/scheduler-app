@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassSchedulerApp">
         <activity
+            android:name=".UI.AddUserToModuleActivity"
+            android:exported="false" />
+        <activity
             android:name=".UI.AddModuleActivity"
             android:exported="false" />
         <activity
@@ -41,7 +44,6 @@
         <activity
             android:name=".UI.AddAnnouncementActivity"
             android:exported="false" />
-
 
         <meta-data
             android:name="preloaded_fonts"
