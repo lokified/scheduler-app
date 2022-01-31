@@ -3,15 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/background_card_light"
     android:padding="4dp">
+
+    <TextView
+        android:id="@+id/tv_Add_User_to_Module_Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Add user to module"
+        android:textColor="@color/main_theme"
+        android:textSize="24sp"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/name"
         android:textAllCaps="true"
@@ -19,25 +33,33 @@
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_Add_User_to_Module_Heading" />
 
-    <com.google.android.material.textfield.TextInputEditText
+
+    <EditText
         android:id="@+id/et_Name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/card_background"
+        android:fontFamily="@font/roboto_light"
         android:hint="@string/name"
-        android:minHeight="48dp"
+        android:paddingStart="16dp"
+        android:textColor="@color/main_theme"
+        android:textColorHint="@color/main_theme"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_Name"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/tv_Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/email"
         android:textAllCaps="true"
@@ -47,23 +69,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_Name" />
 
-    <com.google.android.material.textfield.TextInputEditText
+
+    <EditText
         android:id="@+id/et_Email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/card_background"
+        android:fontFamily="@font/roboto_light"
         android:hint="@string/email"
-        android:minHeight="48dp"
+        android:paddingStart="16dp"
+        android:textColor="@color/main_theme"
+        android:textColorHint="@color/main_theme"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_Email"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_Email"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/tv_Position"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/position"
         android:textAllCaps="true"
@@ -73,23 +103,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_Email" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:id="@+id/et_Position"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/card_background"
+        android:fontFamily="@font/roboto_light"
         android:hint="@string/position"
-        android:minHeight="48dp"
+        android:paddingStart="16dp"
+        android:textColor="@color/main_theme"
+        android:textColorHint="@color/main_theme"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_Position"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_Position"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/tv_ModuleId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/module_id"
         android:textAllCaps="true"
@@ -99,26 +136,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_Position" />
 
-    <com.google.android.material.textfield.TextInputEditText
+
+    <EditText
         android:id="@+id/et_ModuleId"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/card_background"
+        android:fontFamily="@font/roboto_light"
         android:hint="@string/module_id"
-        android:minHeight="48dp"
+        android:paddingStart="16dp"
+        android:textColor="@color/main_theme"
+        android:textColorHint="@color/main_theme"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_ModuleId"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="TouchTargetSizeCheck" />
+
     <Button
         android:id="@+id/btn_Add_UserModule"
         android:layout_width="250dp"
         android:layout_height="45dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/button_background_light"
+        android:paddingBottom="14dp"
         android:text="Add"
         android:textAlignment="center"
-        android:paddingBottom="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
