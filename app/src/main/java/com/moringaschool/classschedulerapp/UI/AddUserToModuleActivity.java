@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -34,47 +35,43 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class AddUserToModuleActivity extends AppCompatActivity implements View.OnClickListener{
+public class AddUserToModuleActivity extends AppCompatActivity{
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.et_Name) EditText editUserName;
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.et_Email) EditText editUserEmail;
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.et_Position) EditText editUserPosition;
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.et_ModuleId) EditText editUserModuleId;
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.btn_Add_UserModule) Button addUserModuleButton;
+    @BindView(R.id.textviewmodule)
+    TextView modulename;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_user_to_module);
+        setContentView(R.layout.activity_usermodule);
         ButterKnife.bind(this);
 
-        editUserName.setOnClickListener(this);
-        editUserEmail.setOnClickListener(this);
-        editUserPosition.setOnClickListener(this);
-        editUserModuleId.setOnClickListener(this);
-        addUserModuleButton.setOnClickListener(this);
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("moduleName");
+
+        String Item = intent.getExtras().getString("moduleid");
+        int id = Integer.parseInt(Item);
+
+        modulename.setText(name);
 
     }
 
-    @Override
-    public void onClick(View view) {
-        if(view == addUserModuleButton){
-            String name = editUserName.getText().toString();
-            String email = editUserEmail.getText().toString();
-            String position = editUserPosition.getText().toString();
-            int moduleId = editUserModuleId.getId();
-
-            postUserModule(name,email,position,moduleId);
-
-            Intent intent = new Intent(AddUserToModuleActivity.this, UserModuleFragment.class);
-            startActivity(intent);
-        }
-
-    }
+//    @Override
+//    public void onClick(View view) {
+//        if(view == addUserModuleButton){
+//            String name = editUserName.getText().toString();
+//            String email = editUserEmail.getText().toString();
+//            String position = editUserPosition.getText().toString();
+//            int moduleId = editUserModuleId.getId();
+//
+//            postUserModule(name,email,position,moduleId);
+//
+//            Intent intent = new Intent(AddUserToModuleActivity.this, LandingActivity.class);
+//            startActivity(intent);
+//        }
+//
+//    }
 
     public void postUserModule(String name,String email, String position,int moduleId) {
         Retrofit retrofit = new Retrofit.Builder()
@@ -86,7 +83,7 @@ public class AddUserToModuleActivity extends AppCompatActivity implements View.O
 
         UserModuleResponse usermodule = new UserModuleResponse(name,email,position,moduleId);
 
-        Call<UserModuleResponse> call = schedulesAPI.addUserModule(usermodule);
+        Call<UserModuleResponse> call = schedulesAPI.addUserModule(1,2,usermodule);
 
         call.enqueue(new Callback<UserModuleResponse>() {
             @Override

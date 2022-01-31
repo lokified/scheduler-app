@@ -6,13 +6,11 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_card_light"
     android:padding="4dp">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_card_light"
         android:padding="4dp">
-
         <TextView
             android:id="@+id/tv_Add_User_to_Module_Heading"
             android:layout_width="wrap_content"
@@ -26,7 +24,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/tv_Name"
             android:layout_width="wrap_content"
@@ -40,8 +37,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_Add_User_to_Module_Heading" />
-
-
         <EditText
             android:id="@+id/et_Name"
             android:layout_width="match_parent"
@@ -60,7 +55,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_Name"
             tools:ignore="TouchTargetSizeCheck" />
-
         <TextView
             android:id="@+id/tv_Email"
             android:layout_width="wrap_content"
@@ -74,8 +68,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_Name" />
-
-
         <EditText
             android:id="@+id/et_Email"
             android:layout_width="match_parent"
@@ -94,7 +86,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_Email"
             tools:ignore="TouchTargetSizeCheck" />
-
         <TextView
             android:id="@+id/tv_Position"
             android:layout_width="wrap_content"
@@ -108,7 +99,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_Email" />
-
         <EditText
             android:id="@+id/et_Position"
             android:layout_width="match_parent"
@@ -127,7 +117,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_Position"
             tools:ignore="TouchTargetSizeCheck" />
-
         <TextView
             android:id="@+id/tv_ModuleId"
             android:layout_width="wrap_content"
@@ -141,8 +130,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_Position" />
-
-
         <EditText
             android:id="@+id/et_ModuleId"
             android:layout_width="match_parent"
@@ -161,7 +148,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_ModuleId"
             tools:ignore="TouchTargetSizeCheck" />
-
         <Button
             android:id="@+id/btn_Add_UserModule"
             android:layout_width="250dp"
@@ -176,6 +162,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_ModuleId"
             tools:ignore="TouchTargetSizeCheck" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
