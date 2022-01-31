@@ -14,16 +14,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a54c06fb-3297-4d3c-9fa8-194e0fc1ffa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/ScheduleDetailActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/ScheduleDetailFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/adapter/DetailViewPager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_schedule_detail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_schedule_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/adapter/SchedulesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/adapter/SchedulesAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AnnouncementsListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/AnnouncementsListFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/ModulesFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/UI/ModulesFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_announcements.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_announcements.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_modules.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643570249185</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="create session details fragments to list session details">
+      <created>1643604671552</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1643604671552</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -316,6 +318,7 @@
     <MESSAGE value="make changes" />
     <MESSAGE value="change id of the field" />
     <MESSAGE value="add a refresh layout to the fragment" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a refresh layout to the fragment" />
+    <MESSAGE value="create session details fragments to list session details" />
+    <option name="LAST_COMMIT_MESSAGE" value="create session details fragments to list session details" />
   </component>
 </project>

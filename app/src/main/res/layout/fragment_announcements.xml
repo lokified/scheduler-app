@@ -5,13 +5,18 @@
     android:layout_height="match_parent"
     tools:context=".UI.AnnouncementsListFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView2"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayoutAnnouncement"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/transparent"
-        tools:listitem="@layout/announcement_item" />
+        android:layout_height="match_parent">
 
+        <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recyclerView2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/transparent"
+           tools:listitem="@layout/announcement_item" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_announcement"
