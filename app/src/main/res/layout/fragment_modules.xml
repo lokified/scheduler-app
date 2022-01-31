@@ -5,12 +5,18 @@
     android:layout_height="match_parent"
     tools:context=".UI.ModulesFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewModule"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayoutModule"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/transparent"
-        tools:listitem="@layout/module_item" />
+        android:layout_height="match_parent">
+
+       <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclerViewModule"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/transparent"
+          tools:listitem="@layout/module_item" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

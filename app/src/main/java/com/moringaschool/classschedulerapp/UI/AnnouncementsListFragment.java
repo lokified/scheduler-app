@@ -7,7 +7,9 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +40,7 @@ public class AnnouncementsListFragment extends Fragment implements View.OnClickL
     @BindView(R.id.recyclerView2) RecyclerView mRecyclerView;
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.add_announcement) FloatingActionButton mAddAnnouncement;
+    @BindView(R.id.refreshLayoutAnnouncement) SwipeRefreshLayout mRefresh;
 
     public AnnouncementsListFragment() {
         // Required empty public constructor
@@ -60,6 +63,26 @@ public class AnnouncementsListFragment extends Fragment implements View.OnClickL
 
         mAddAnnouncement.setOnClickListener(this);
 
+        getAnnouncement();
+        mRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                getAnnouncement();
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override public void run() {
+                        // Stop animation (This will be after 3 seconds)
+                        mRefresh.setRefreshing(false);
+                    }
+                }, 2000);
+            }
+        });
+
+
+        return view;
+    }
+
+    public void getAnnouncement() {
         SchedulesAPI client = SchedulesClient.getClient();
 
         Call<List<Announcement>> call = client.getAllAnnouncements();
@@ -83,8 +106,6 @@ public class AnnouncementsListFragment extends Fragment implements View.OnClickL
                 Toast.makeText(getActivity(), "something went wrong", Toast.LENGTH_LONG).show();
             }
         });
-
-        return view;
     }
 
     @Override

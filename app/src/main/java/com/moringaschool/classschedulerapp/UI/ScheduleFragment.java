@@ -72,7 +72,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener{
                         // Stop animation (This will be after 3 seconds)
                         mRefresh.setRefreshing(false);
                     }
-                }, 3000);
+                }, 2000);
             }
         });
 
