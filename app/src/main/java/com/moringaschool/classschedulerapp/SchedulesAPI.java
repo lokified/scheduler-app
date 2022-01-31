@@ -35,9 +35,11 @@ public interface SchedulesAPI {
     @GET("/modules")
     Call<List<ModuleResponse>> getAllModules();
 
-    @POST("/user/:userId/modules/:moduleId")
-
-    Call<UserModuleResponse> addUserModule(@Body UserModuleResponse usermodule);
+    @POST("/user/{userId}/modules/{moduleId}")
+    Call<UserModuleResponse> addUserModule(
+            @Path(value = "userId",encoded = true)int userid,
+            @Path(value = "moduleId",encoded = true)int moduleid,
+            @Body UserModuleResponse usermodule);
 
     @GET("/modules/{id}/users")
     Call<List<UserModuleResponse>> getModuleByUser(

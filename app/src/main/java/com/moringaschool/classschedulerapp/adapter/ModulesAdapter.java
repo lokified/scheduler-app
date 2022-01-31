@@ -100,7 +100,10 @@ public class ModulesAdapter extends RecyclerView.Adapter<ModulesAdapter.ModulesV
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             Toast.makeText(mContext, "modules", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(mContext, AddUserToModuleActivity.class);
+                            Intent intent = new Intent(mContext, UsermoduleActivity.class);
+                            intent.putExtra("moduleid",String.valueOf(moduleid));
+                            intent.putExtra("moduleName",moduleName);
+
                             mContext.startActivity(intent);
                         }
                     }).show();

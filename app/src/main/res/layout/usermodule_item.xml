@@ -63,5 +63,4 @@
             app:layout_constraintTop_toBottomOf="@id/tv_userPosition_item" />
     </LinearLayout>
 
-
 </RelativeLayout>
