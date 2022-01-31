@@ -20,6 +20,7 @@ import com.moringaschool.classschedulerapp.R;
 import com.moringaschool.classschedulerapp.SchedulesAPI;
 import com.moringaschool.classschedulerapp.models.ModuleResponse;
 import com.moringaschool.classschedulerapp.models.SchedulerResponse;
+import com.moringaschool.classschedulerapp.models.UserModuleResponse;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -48,7 +49,7 @@ public class AddUserToModuleActivity extends AppCompatActivity implements View.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_module);
+        setContentView(R.layout.add_user_to_module);
         ButterKnife.bind(this);
 
         editUserName.setOnClickListener(this);
@@ -66,11 +67,10 @@ public class AddUserToModuleActivity extends AppCompatActivity implements View.O
             String email = editUserEmail.getText().toString();
             String position = editUserPosition.getText().toString();
             int moduleId = editUserModuleId.getId();
-//            Log.d("err",title);
 
             postUserModule(name,email,position,moduleId);
 
-            Intent intent = new Intent(AddModuleActivity.this, LandingActivity.class);
+            Intent intent = new Intent(AddUserToModuleActivity.this, UserModuleFragment.class);
             startActivity(intent);
         }
 
@@ -84,23 +84,23 @@ public class AddUserToModuleActivity extends AppCompatActivity implements View.O
 
         SchedulesAPI schedulesAPI = retrofit.create(SchedulesAPI.class);
 
-        ModuleResponse module = new ModuleResponse(name);
+        UserModuleResponse usermodule = new UserModuleResponse(name,email,position,moduleId);
 
-        Call<ModuleResponse> call = schedulesAPI.addModule(module);
+        Call<UserModuleResponse> call = schedulesAPI.addUserModule(usermodule);
 
-        call.enqueue(new Callback<ModuleResponse>() {
+        call.enqueue(new Callback<UserModuleResponse>() {
             @Override
-            public void onResponse(Call<ModuleResponse> call, Response<ModuleResponse> response) {
+            public void onResponse(Call<UserModuleResponse> call, Response<UserModuleResponse> response) {
 
                 int response1 = response.code();
                 Log.d("success", String.valueOf(response1));
-                Toast.makeText(AddModuleActivity.this, "posted", Toast.LENGTH_LONG).show();
+                Toast.makeText(AddUserToModuleActivity.this, "Added", Toast.LENGTH_LONG).show();
             }
 
             @Override
-            public void onFailure(Call<ModuleResponse> call, Throwable t) {
+            public void onFailure(Call<UserModuleResponse> call, Throwable t) {
 
-                Toast.makeText(AddModuleActivity.this, "something went wrong", Toast.LENGTH_LONG).show();
+                Toast.makeText(AddUserToModuleActivity.this, "something went wrong", Toast.LENGTH_LONG).show();
             }
         });
     }
