@@ -13,11 +13,13 @@
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_schedule.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_schedule1.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_schedule_detail.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/announcement_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fix.xml" value="0.1503623188405797" />
         <entry key="app/src/main/res/layout/fragment_announcements.xml" value="0.178125" />
         <entry key="app/src/main/res/layout/fragment_modules.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_schedule.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_schedule_detail.xml" value="0.18" />
         <entry key="app/src/main/res/layout/schedule_item.xml" value="0.25" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.1" />
       </map>

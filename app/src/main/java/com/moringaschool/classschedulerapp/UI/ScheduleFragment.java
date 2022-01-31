@@ -7,10 +7,13 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -34,6 +37,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener{
     @BindView(R.id.recyclerViewSchedule) RecyclerView recyclerView;
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.button_add_note2) FloatingActionButton addNoteButton;
+    @BindView(R.id.refreshLayout) SwipeRefreshLayout mRefresh;
 
     public ScheduleFragment() {
         // Required empty public constructor
@@ -56,6 +60,26 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener{
         ButterKnife.bind(this, view);
         addNoteButton.setOnClickListener(this);
 
+        getSchedules();
+
+        mRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                getSchedules();
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override public void run() {
+                        // Stop animation (This will be after 3 seconds)
+                        mRefresh.setRefreshing(false);
+                    }
+                }, 2000);
+            }
+        });
+
+        return view;
+    }
+
+    public void getSchedules() {
         SchedulesAPI client = SchedulesClient.getClient();
 
         Call<List<SchedulerResponse>> call = client.getAllSessions();
@@ -79,7 +103,6 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener{
                 Toast.makeText(getActivity(), "something went wrong", Toast.LENGTH_LONG).show();
             }
         });
-        return view;
     }
 
     @Override
@@ -87,7 +110,6 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener{
         if(view == addNoteButton){
             Intent intent = new Intent(getActivity(), AddScheduleActivity.class);
             startActivity(intent);
-            //Toast.makeText(this, "schedule activity", Toast.LENGTH_SHORT).show();
         }
     }
 }
