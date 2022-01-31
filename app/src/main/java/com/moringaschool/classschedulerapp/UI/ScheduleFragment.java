@@ -42,6 +42,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener{
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.button_add_note2) FloatingActionButton addNoteButton;
     private SchedulesAdapter schedulesAdapter;
+    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.refreshLayout) SwipeRefreshLayout mRefresh;
 
     public ScheduleFragment() {
