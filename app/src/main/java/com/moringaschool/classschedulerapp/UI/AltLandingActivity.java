@@ -46,12 +46,11 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
         //handles configuration changes
         if (savedInstanceState==null) {
             //open message fragment
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ModulesFragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_modules);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ScheduleFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_schedules);
         }
 
     }
-
 
     //handle navigation drawer click events
     @Override
