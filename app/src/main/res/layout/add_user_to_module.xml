@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/background_card_light"
         android:padding="4dp">
+
         <TextView
             android:id="@+id/tv_Add_User_to_Module_Heading"
             android:layout_width="wrap_content"

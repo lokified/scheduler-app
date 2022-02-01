@@ -54,6 +54,12 @@
         <activity
             android:name=".UI.AddUserToModuleActivity"
             android:exported="false" />
+        <activity
+            android:name=".UI.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AddEditProfileActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
