@@ -30,7 +30,7 @@ import butterknife.ButterKnife;
 public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.SchedulesViewHolder>  implements Filterable {
 
 
-    List <SchedulerResponse> mSchedules;
+    private static List <SchedulerResponse> mSchedules;
     private static List<SchedulerResponse> UnFilteredSchedules;
     Context mContext;
 
@@ -67,7 +67,7 @@ public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.Sche
         protected FilterResults performFiltering(CharSequence charSequence) {
             List<SchedulerResponse> FilteredSessions = new ArrayList<>();
             if (charSequence == null || charSequence.length() == 0 ){
-                FilteredSessions.addAll(mSchedules);
+                FilteredSessions.addAll(UnFilteredSchedules);
             }
             else{
                 String userSearchString = charSequence.toString().toLowerCase().trim();
@@ -93,10 +93,14 @@ public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.Sche
     };
 
 
-    public class SchedulesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public static class SchedulesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.tv_title_schedule_item) TextView mTitleSchedule;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.tv_description_schedule_item) TextView mDescriptionSchedule;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.tv_start_time) TextView mStartTime;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.tv_end_time) TextView mEndTime;
 
         private Context mContext;
