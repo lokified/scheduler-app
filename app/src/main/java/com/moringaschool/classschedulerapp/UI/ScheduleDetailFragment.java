@@ -15,19 +15,18 @@ import com.moringaschool.classschedulerapp.models.SchedulerResponse;
 
 import org.parceler.Parcels;
 
-import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ScheduleDetailFragment extends Fragment {
 
-    @BindView(R.id.startTimeLabel) TextView mSessionStartLabel;
-    @BindView(R.id.endTimeLabel) TextView mSessionEndLabel;
-    @BindView(R.id.linkLabel) TextView mSessionLinkLabel;
-    @BindView(R.id.descriptionLabel) TextView mSessionDescriptionLabel;
+    @BindView(R.id.tv_Schedule_Detail_Start_Time) TextView tv_Schedule_Detail_Start_Time;
+    @BindView(R.id.tv_Schedule_Detail_Finish_Time) TextView tv_Schedule_Detail_Finish_Time;
+    @BindView(R.id.tv_Schedule_Detail_Location) TextView tv_Schedule_Detail_Location;
+    @BindView(R.id.tv_Schedule_Detail_Description) TextView tv_Schedule_Detail_Description;
 
     private SchedulerResponse mSession;
+
 
     public ScheduleDetailFragment() {
         // Required empty public constructor
@@ -49,21 +48,18 @@ public class ScheduleDetailFragment extends Fragment {
 
         mSession = Parcels.unwrap(getArguments().getParcelable("session"));
 
-
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_schedule_detail, container, false);
         ButterKnife.bind(this, view);
 
-        mSessionStartLabel.setText("start : "+ mSession.getStartTime());
-        mSessionEndLabel.setText("end : " + mSession.getEndTime());
-        mSessionLinkLabel.setText("link : " + mSession.getInvitationLink());
-        mSessionDescriptionLabel.setText(mSession.getDescription());
-
+        tv_Schedule_Detail_Start_Time.setText(mSession.getStartTime());
+        tv_Schedule_Detail_Finish_Time.setText(mSession.getEndTime());
+        tv_Schedule_Detail_Location.setText(mSession.getInvitationLink());
+        tv_Schedule_Detail_Description.setText(mSession.getDescription());
 
         return view;
     }
