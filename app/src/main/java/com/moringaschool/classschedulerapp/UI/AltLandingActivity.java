@@ -67,9 +67,13 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AnnouncementsListFragment()).commit();
                 break;
             case R.id.nav_profile:
+                Intent profileIntent = new Intent(this, ProfileActivity.class);
+                startActivity(profileIntent);
                 Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_edit_profile:
+                Intent editProfileIntent = new Intent(this, AddEditProfileActivity.class);
+                startActivity(editProfileIntent);
                 Toast.makeText(this, "Edit Profile", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_logout:

@@ -10,7 +10,8 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:id="@+id/textviewmodule"
-       android:text= "Kunishtua"/>
+       android:text= "Kunishtua"
+       android:visibility="invisible"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewUserModule"
