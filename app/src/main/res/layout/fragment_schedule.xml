@@ -25,14 +25,30 @@
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/button_add_note2"
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/button_add_note2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/outline_create_black_18"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_margin="32dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        />-->
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/outline_create_black_18"
+        android:id="@+id/button_add_note2"
+        android:text="create"
+        android:textColor="@color/white"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:icon="@drawable/outline_create_black_18"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_gravity="bottom|end"
-        android:layout_margin="32dp"
-        android:backgroundTint="@color/white"
-        />
+        android:backgroundTint="@color/main_theme" />
 
 </FrameLayout>

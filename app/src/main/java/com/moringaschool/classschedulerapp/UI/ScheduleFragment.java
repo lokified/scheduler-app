@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.moringaschool.classschedulerapp.R;
 import com.moringaschool.classschedulerapp.SchedulesAPI;
@@ -40,7 +41,7 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener{
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.recyclerViewSchedule) RecyclerView recyclerView;
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.button_add_note2) FloatingActionButton addNoteButton;
+    @BindView(R.id.button_add_note2) ExtendedFloatingActionButton addNoteButton;
     private SchedulesAdapter schedulesAdapter;
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.refreshLayout) SwipeRefreshLayout mRefresh;
