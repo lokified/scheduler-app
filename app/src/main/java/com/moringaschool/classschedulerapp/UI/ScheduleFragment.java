@@ -84,6 +84,21 @@ public class ScheduleFragment extends Fragment implements View.OnClickListener{
             }
         });
 
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener(){
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy){
+                if (dy<0 && !addNoteButton.isShown())
+                    addNoteButton.show();
+                else if(dy>0 && addNoteButton.isShown())
+                    addNoteButton.hide();
+            }
+
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+        });
+
         return view;
     }
 
