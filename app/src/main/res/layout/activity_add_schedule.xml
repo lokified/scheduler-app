@@ -184,7 +184,7 @@
             android:focusable="false"
             android:focusableInTouchMode="false"
             android:fontFamily="@font/roboto"
-            android:hint="End time"
+            android:hint="end time"
             android:textColor="@color/main_theme"
             android:textColorHint="@color/main_theme"
             android:textSize="16sp"
