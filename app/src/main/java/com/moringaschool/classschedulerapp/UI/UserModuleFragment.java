@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -37,6 +38,7 @@ import retrofit2.Response;
 public class UserModuleFragment extends Fragment{
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.recyclerViewUserModule) RecyclerView recyclerView;
+    @BindView(R.id.errorUserModule) TextView errorUser;
 
     public UserModuleFragment() {
         // Required empty public constructor
@@ -82,7 +84,8 @@ public class UserModuleFragment extends Fragment{
             @Override
             public void onFailure(Call<List<UserModuleResponse>> call, Throwable t) {
 
-                Toast.makeText(getActivity(), "something went wrong", Toast.LENGTH_LONG).show();
+                errorUser.setText("No users in the module");
+                errorUser.setVisibility(View.VISIBLE);
             }
         });
         return view;
