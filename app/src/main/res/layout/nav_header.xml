@@ -13,12 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher_round"
+        android:id="@+id/avatarprofile"
         tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto"
+        android:id="@+id/usernameRon"
         android:paddingTop="8dp"
         android:text="@string/jane_doe"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -28,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto"
+        android:id="@+id/userEmail"
         android:text="muthiora@gmail.com"
         tools:ignore="TextContrastCheck" />
 
