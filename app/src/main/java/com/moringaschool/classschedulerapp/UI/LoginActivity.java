@@ -77,7 +77,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
-                    Log.d("login method", "sign in success" + task.isSuccessful());
                     if (!task.isSuccessful()) {
                         Log.w("login method",task.getException());
                         Toast.makeText(LoginActivity.this, "Authentication failed.",

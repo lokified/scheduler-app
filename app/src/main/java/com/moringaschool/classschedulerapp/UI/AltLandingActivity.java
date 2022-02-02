@@ -47,25 +47,18 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
 
         ButterKnife.bind(this);
 
-        //add listener to navigation drawer items
         navigationView.setNavigationItemSelectedListener(this);
 
-        //use custom toolbar as actionbar
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
 
-        //handles configuration changes
         if (savedInstanceState==null) {
-            //open message fragment
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ScheduleFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_schedules);
         }
-
-
-        //display name of user
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -98,7 +91,6 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
 
     }
 
-    //opens gallery
     private void openGallery() {
         Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         startActivityForResult(gallery, PICK_IMAGE);
@@ -113,8 +105,6 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
         }
     }
 
-
-    //handle navigation drawer click events
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -147,7 +137,6 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
         return true;
     }
 
-    //don't leave activity on back press, but close drawer instead, if already open
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {

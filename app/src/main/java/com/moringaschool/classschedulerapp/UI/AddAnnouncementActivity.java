@@ -32,7 +32,6 @@ public class AddAnnouncementActivity extends AppCompatActivity implements View.O
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.btn_Add_Announcement_Login) Button btn_add_announcement;
 
-    Announcement mAnnouncement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +49,6 @@ public class AddAnnouncementActivity extends AppCompatActivity implements View.O
         if(view == btn_add_announcement){
             String title = announcement_Title.getText().toString();
             String description = announcement_description.getText().toString();
-            //int userId = mAnnouncement.getUserId();
 
             postAnnouncement(title,1,description);
 
@@ -77,9 +75,6 @@ public class AddAnnouncementActivity extends AppCompatActivity implements View.O
             @Override
             public void onResponse(Call<Announcement> call, Response<Announcement> response) {
 
-                int response1 = response.code();
-                Log.d("success", String.valueOf(response1));
-                Toast.makeText(AddAnnouncementActivity.this, "posted", Toast.LENGTH_LONG).show();
             }
 
             @Override

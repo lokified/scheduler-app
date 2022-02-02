@@ -51,27 +51,10 @@ public class AddUserToModuleActivity extends AppCompatActivity{
         String name = intent.getStringExtra("moduleName");
 
         String Item = intent.getExtras().getString("moduleid");
-        int id = Integer.parseInt(Item);
 
         modulename.setText(name);
 
     }
-
-//    @Override
-//    public void onClick(View view) {
-//        if(view == addUserModuleButton){
-//            String name = editUserName.getText().toString();
-//            String email = editUserEmail.getText().toString();
-//            String position = editUserPosition.getText().toString();
-//            int moduleId = editUserModuleId.getId();
-//
-//            postUserModule(name,email,position,moduleId);
-//
-//            Intent intent = new Intent(AddUserToModuleActivity.this, LandingActivity.class);
-//            startActivity(intent);
-//        }
-//
-//    }
 
     public void postUserModule(String name,String email, String position,int moduleId) {
         Retrofit retrofit = new Retrofit.Builder()
