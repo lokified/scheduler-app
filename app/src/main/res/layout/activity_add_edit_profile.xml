@@ -4,15 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_card_light"
-    android:padding="0.5dp">
-
+    android:background="@drawable/background_card_light">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/background_card_light"
         android:id="@+id/cl_Add_Edit_Profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".UI.ProfileActivity">
 
         <LinearLayout
@@ -58,7 +55,8 @@
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/iv_Add_Edit_Profile_Avatar"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
                     android:id="@+id/et_Add_Edit_Profile_Last_Name"
@@ -71,7 +69,8 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="@+id/et_Add_Edit_Profile_First_Name"
-                    app:layout_constraintTop_toBottomOf="@+id/et_Add_Edit_Profile_First_Name" />
+                    app:layout_constraintTop_toBottomOf="@+id/et_Add_Edit_Profile_First_Name"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
                     android:id="@+id/tv_Add_Edit_Profile_Email"
@@ -92,14 +91,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/roboto_bold"
+                    android:hint="Email"
                     android:padding="4dp"
                     android:text=""
-                    android:hint="Email"
-                    android:textColorHint="@color/main_theme"
                     android:textColor="@color/main_theme"
+                    android:textColorHint="@color/main_theme"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="@+id/et_Add_Edit_Profile_Last_Name"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_Add_Edit_Profile_Email" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Add_Edit_Profile_Email"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
                     android:id="@+id/tv_Add_Edit_Profile_DoB"
@@ -120,13 +120,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/roboto"
-                    android:textStyle="bold"
                     android:padding="2dp"
                     android:text="December, 07, 1995"
                     android:textSize="12sp"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="@+id/et_Add_Edit_Profile_Last_Name"
                     app:layout_constraintTop_toBottomOf="@+id/tv_Add_Edit_Profile_DoB"
-                    tools:ignore="Autofill" />
+                    tools:ignore="Autofill,TouchTargetSizeCheck" />
 
                 <TextView
                     android:id="@+id/tv_Add_Edit_Profile_Address"
@@ -165,7 +165,7 @@
         <LinearLayout
             android:id="@+id/ll_Bio_Card"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="120dp"
             android:layout_margin="24dp"
             android:background="@drawable/card_background"
             android:orientation="vertical"
@@ -192,8 +192,8 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:fontFamily="@font/roboto"
-                android:maxLines="4"
                 android:hint="Summary..."
+                android:maxLines="4"
                 android:textColor="@color/main_theme"
                 android:textSize="14sp" />
 
@@ -214,7 +214,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1">
 
                 <TextView
@@ -293,7 +293,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="173dp">
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -348,20 +348,18 @@
                     app:layout_constraintStart_toStartOf="@+id/et_Add_Edit_Profile_Website"
                     app:layout_constraintTop_toTopOf="@+id/textView7" />
 
-                <Button
-                    android:id="@+id/submitButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="SUBMIT"
-                    app:layout_constraintBaseline_toBottomOf="@+id/et_Add_Edit_Profile_Phone_Number"
-                    tools:layout_editor_absoluteX="143dp"
-                    tools:layout_editor_absoluteY="109dp"
-                    tools:ignore="MissingConstraints" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="SUBMIT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_Contacts_Card" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </ScrollView>
