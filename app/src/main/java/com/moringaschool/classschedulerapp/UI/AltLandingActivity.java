@@ -8,9 +8,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,8 +33,11 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
     @BindView(R.id.nav_view)
     NavigationView navigationView;
 
+    ImageView imageView;
+
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    private static final int PICK_IMAGE = 100;
 
 
     @Override
@@ -73,6 +79,15 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
                 TextView navUsername = (TextView) headerView.findViewById(R.id.usernameRon);
                 TextView navUseremail = (TextView) headerView.findViewById(R.id.userEmail);
 
+                imageView = (ImageView) headerView.findViewById(R.id.avatarprofile);
+
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        openGallery();
+                    }
+                });
+
                 if (user != null) {
                     navUsername.setText(user.getDisplayName());
                     navUseremail.setText(email);
@@ -81,6 +96,21 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
         };
 
 
+    }
+
+    //opens gallery
+    private void openGallery() {
+        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        startActivityForResult(gallery, PICK_IMAGE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && requestCode == PICK_IMAGE){
+            Uri imageUri = data.getData();
+            imageView.setImageURI(imageUri);
+        }
     }
 
 
