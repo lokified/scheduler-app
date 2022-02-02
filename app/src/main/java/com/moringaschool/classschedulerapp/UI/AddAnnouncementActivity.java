@@ -1,7 +1,5 @@
 package com.moringaschool.classschedulerapp.UI;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.moringaschool.classschedulerapp.Constants;
 import com.moringaschool.classschedulerapp.R;
 import com.moringaschool.classschedulerapp.SchedulesAPI;
 import com.moringaschool.classschedulerapp.models.Announcement;
-import com.moringaschool.classschedulerapp.models.SchedulerResponse;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -55,7 +54,7 @@ public class AddAnnouncementActivity extends AppCompatActivity implements View.O
 
             postAnnouncement(title,1,description);
 
-            Intent intent = new Intent(AddAnnouncementActivity.this, LandingActivity.class);
+            Intent intent = new Intent(AddAnnouncementActivity.this, AltLandingActivity.class);
             startActivity(intent);
             finish();
         }

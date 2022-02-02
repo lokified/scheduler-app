@@ -1,16 +1,12 @@
 package com.moringaschool.classschedulerapp.UI;
 
 import android.annotation.SuppressLint;
-import android.app.DatePickerDialog;
-import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,11 +15,6 @@ import com.moringaschool.classschedulerapp.Constants;
 import com.moringaschool.classschedulerapp.R;
 import com.moringaschool.classschedulerapp.SchedulesAPI;
 import com.moringaschool.classschedulerapp.models.ModuleResponse;
-import com.moringaschool.classschedulerapp.models.SchedulerResponse;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -58,7 +49,7 @@ public class AddModuleActivity extends AppCompatActivity implements View.OnClick
 
             postModule(title);
 
-            Intent intent = new Intent(AddModuleActivity.this, LandingActivity.class);
+            Intent intent = new Intent(AddModuleActivity.this, AltLandingActivity.class);
             startActivity(intent);
         }
 
