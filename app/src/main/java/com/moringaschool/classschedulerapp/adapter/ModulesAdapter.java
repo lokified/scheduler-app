@@ -15,13 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.moringaschool.classschedulerapp.R;
-import com.moringaschool.classschedulerapp.UI.AddUserToModuleActivity;
-import com.moringaschool.classschedulerapp.UI.LandingActivity;
-import com.moringaschool.classschedulerapp.UI.UserModuleFragment;
-//import com.moringaschool.classschedulerapp.UI.UsermoduleActivity;
 import com.moringaschool.classschedulerapp.UI.UsermoduleActivity;
 import com.moringaschool.classschedulerapp.models.ModuleResponse;
-import com.moringaschool.classschedulerapp.models.SchedulerResponse;
 
 import java.util.List;
 

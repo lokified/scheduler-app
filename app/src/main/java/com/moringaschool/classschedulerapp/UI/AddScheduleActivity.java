@@ -125,7 +125,7 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
             postSession(title,link,startTime,endTime,description,type);
 
 
-            Intent intent = new Intent(AddScheduleActivity.this, LandingActivity.class);
+            Intent intent = new Intent(AddScheduleActivity.this, AltLandingActivity.class);
             startActivity(intent);
             finish();
         }
