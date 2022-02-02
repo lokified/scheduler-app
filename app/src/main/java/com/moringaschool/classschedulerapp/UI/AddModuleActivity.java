@@ -45,8 +45,6 @@ public class AddModuleActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View view) {
         if(view == addModuleButton){
             String title = editModuleTitle.getText().toString();
-            Log.d("err",title);
-
             postModule(title);
 
             Intent intent = new Intent(AddModuleActivity.this, AltLandingActivity.class);
@@ -72,7 +70,6 @@ public class AddModuleActivity extends AppCompatActivity implements View.OnClick
             public void onResponse(Call<ModuleResponse> call, Response<ModuleResponse> response) {
 
                 int response1 = response.code();
-                Log.d("success", String.valueOf(response1));
                 Toast.makeText(AddModuleActivity.this, "posted", Toast.LENGTH_LONG).show();
             }
 

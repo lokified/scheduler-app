@@ -68,7 +68,6 @@ public class ModulesAdapter extends RecyclerView.Adapter<ModulesAdapter.ModulesV
         public void bindModules(ModuleResponse module){
             mTitleModule.setText(module.getName());
 
-            Log.d("name",module.getName());
         }
 
         @Override
@@ -83,7 +82,6 @@ public class ModulesAdapter extends RecyclerView.Adapter<ModulesAdapter.ModulesV
                     .setPositiveButton("View Students", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            Toast.makeText(mContext, "students", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(mContext, UsermoduleActivity.class);
                             intent.putExtra("moduleid",String.valueOf(moduleid));
                             mContext.startActivity(intent);

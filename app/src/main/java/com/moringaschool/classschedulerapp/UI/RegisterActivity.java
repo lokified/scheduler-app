@@ -139,7 +139,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Log.d(TAG, Objects.requireNonNull(user.getDisplayName()));
                             Toast.makeText(RegisterActivity.this, "Account created successfully", Toast
                                     .LENGTH_LONG).show();
                         }

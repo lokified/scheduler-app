@@ -121,7 +121,6 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
             String endTime = endDate + " " + editEndTime.getText().toString();;
             String type = editScheduleType.getText().toString();
 
-            Log.d("err",title+"\n"+link+"\n"+startTime+"\n"+endTime+"\n"+description+"\n"+type );
             postSession(title,link,startTime,endTime,description,type);
 
 
@@ -205,9 +204,6 @@ public class AddScheduleActivity extends AppCompatActivity implements View.OnCli
         call.enqueue(new Callback<SchedulerResponse>() {
             @Override
             public void onResponse(Call<SchedulerResponse> call, Response<SchedulerResponse> response) {
-
-                int response1 = response.code();
-                Log.d("success", String.valueOf(response1));
                 Toast.makeText(AddScheduleActivity.this, "posted", Toast.LENGTH_LONG).show();
             }
 

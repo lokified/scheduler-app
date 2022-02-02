@@ -133,8 +133,6 @@ public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.Sche
             mContext.startActivity(intent);
 
             String name = mSchedules.get(itemPosition).getSessionName();
-
-            Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show();
         }
     }
 

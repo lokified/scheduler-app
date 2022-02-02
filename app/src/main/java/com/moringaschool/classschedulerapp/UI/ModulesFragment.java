@@ -111,7 +111,6 @@ public class ModulesFragment extends Fragment implements View.OnClickListener{
         if(view == addModuleButton){
             Intent intent = new Intent(getActivity(), AddModuleActivity.class);
             startActivity(intent);
-            //Toast.makeText(this, "schedule activity", Toast.LENGTH_SHORT).show();
         }
     }
 }
