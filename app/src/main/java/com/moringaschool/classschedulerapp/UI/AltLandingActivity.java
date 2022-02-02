@@ -10,10 +10,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.moringaschool.classschedulerapp.R;
 
 import butterknife.BindView;
@@ -27,12 +30,17 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
     @BindView(R.id.nav_view)
     NavigationView navigationView;
 
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alt_landing);
+
         ButterKnife.bind(this);
+
         //add listener to navigation drawer items
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -50,7 +58,31 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
             navigationView.setCheckedItem(R.id.nav_schedules);
         }
 
+
+        //display name of user
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                String email = user.getEmail();
+
+                NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+                View headerView = navigationView.getHeaderView(0);
+                TextView navUsername = (TextView) headerView.findViewById(R.id.usernameRon);
+                TextView navUseremail = (TextView) headerView.findViewById(R.id.userEmail);
+
+                if (user != null) {
+                    navUsername.setText(user.getDisplayName());
+                    navUseremail.setText(email);
+                }
+            }
+        };
+
+
     }
+
 
     //handle navigation drawer click events
     @Override
@@ -92,6 +124,19 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+        }
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
         }
     }
 
