@@ -18,13 +18,13 @@
         app:cardCornerRadius="40dp"
         android:layout_centerHorizontal="true">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/outline_account_circle_black_24dp"
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/avatarprofile"
-            tools:ignore="ImageContrastCheck"
-            android:scaleType="centerCrop" />
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher_round"
+            tools:ignore="ImageContrastCheck" />
     </androidx.cardview.widget.CardView>
 
 
