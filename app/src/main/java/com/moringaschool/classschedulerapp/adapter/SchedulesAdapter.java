@@ -116,8 +116,8 @@ public class SchedulesAdapter extends RecyclerView.Adapter<SchedulesAdapter.Sche
         public void bindSession(SchedulerResponse session){
             mTitleSchedule.setText(session.getSessionName());
             mDescriptionSchedule.setText(session.getDescription());
-            mStartTime.setText(session.getStartTime());
-            mEndTime.setText(session.getEndTime());
+            mEndTime.setText(session.getStartTime());
+            mStartTime.setText(session.getEndTime());
 
             Log.d("name",session.getSessionName());
         }
