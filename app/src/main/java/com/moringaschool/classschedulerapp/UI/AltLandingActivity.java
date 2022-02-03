@@ -65,7 +65,7 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                String email = user.getEmail();
+                String email = user != null ? user.getEmail() : null;
 
                 NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
                 View headerView = navigationView.getHeaderView(0);
@@ -83,8 +83,8 @@ public class AltLandingActivity extends AppCompatActivity implements NavigationV
 
                 if (user != null) {
                     navUsername.setText(user.getDisplayName());
-                    navUseremail.setText(email);
                 }
+                navUseremail.setText(email);
             }
         };
 
