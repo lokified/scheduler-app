@@ -9,29 +9,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a54c06fb-3297-4d3c-9fa8-194e0fc1ffa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/Attachment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/Attendee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/ConferenceData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/ConferenceSolution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/Creator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/DefaultReminder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/End.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/EntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/EventsResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/Key.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/Organizer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/Reminders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/moringaschool/classschedulerapp/EventsResponseModels/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="a54c06fb-3297-4d3c-9fa8-194e0fc1ffa0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/moringa/.android/avd/Pixel_3_API_28.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -57,6 +41,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
@@ -76,6 +63,7 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
