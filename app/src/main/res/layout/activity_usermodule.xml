@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_card_light"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/usermodulefragment"
+        android:name="com.moringaschool.classschedulerapp.UI.UserModuleFragment"
+        tools:layout="@layout/activity_usermodule"/>
+
+</RelativeLayout>

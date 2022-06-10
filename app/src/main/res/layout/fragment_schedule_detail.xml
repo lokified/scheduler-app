@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.ScheduleDetailFragment"
+    android:orientation="vertical"
+    android:background="@drawable/background_card_light">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cs_schedule_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".UI.ScheduleDetailFragment">
+
+
+        <TextView
+            android:id="@+id/tv_Schedule_Detail_Location"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="24dp"
+            android:background="@drawable/card_background"
+            android:defaultFocusHighlightEnabled="true"
+            android:fontFamily="@preloaded_fonts/roboto_bold"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:textColor="@color/main_theme"
+            android:textColorHint="@color/main_theme"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/tv_Schedule_Detail_Description"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="24dp"
+            android:background="@drawable/card_background"
+            android:defaultFocusHighlightEnabled="true"
+            android:fontFamily="@preloaded_fonts/roboto_bold"
+            android:gravity="start|center_vertical"
+            android:paddingStart="8dp"
+            android:textColor="@color/main_theme"
+            android:textColorHint="@color/main_theme"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Schedule_Detail_Location"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/tv_Schedule_Start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@preloaded_fonts/roboto"
+            android:text="@string/start"
+            android:textColor="@color/main_theme"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_Schedule_Detail_Description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Schedule_Detail_Description" />
+
+        <TextView
+            android:id="@+id/tv_Schedule_Finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@preloaded_fonts/roboto"
+            android:text="@string/end"
+            android:textColor="@color/main_theme"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_Schedule_Start"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Schedule_Start" />
+
+        <TextView
+            android:id="@+id/tv_Schedule_Detail_Start_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@preloaded_fonts/roboto_bold"
+            android:textColor="@color/main_theme"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_Schedule_Start"
+            app:layout_constraintEnd_toEndOf="@+id/tv_Schedule_Detail_Description"
+            app:layout_constraintTop_toTopOf="@+id/tv_Schedule_Start"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/tv_Schedule_Detail_Finish_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@preloaded_fonts/roboto_bold"
+            android:textColor="@color/main_theme"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_Schedule_Finish"
+            app:layout_constraintEnd_toEndOf="@+id/tv_Schedule_Detail_Description"
+            app:layout_constraintStart_toStartOf="@+id/tv_Schedule_Detail_Start_Time"
+            app:layout_constraintTop_toTopOf="@+id/tv_Schedule_Finish"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

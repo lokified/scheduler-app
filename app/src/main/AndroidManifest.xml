@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.moringaschool.classschedulerapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +13,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassSchedulerApp">
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.UsermoduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AltLandingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClassSchedulerApp.NoActionBar"/>
+        <activity
+            android:name=".UI.ScheduleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AddModuleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AnnouncementsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,6 +37,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".UI.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.ScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AddScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AddAnnouncementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AddUserToModuleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AddEditProfileActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
